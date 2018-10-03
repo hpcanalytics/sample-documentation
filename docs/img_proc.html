@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Image Processing · HPAnalytics</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Welcome"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Image Processing · HPAnalytics"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hpcanalytics.github.io/sample-documentation/index.html"/><meta property="og:description" content="# Welcome"/><meta property="og:image" content="https://hpcanalytics.github.io/sample-documentation/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hpcanalytics.github.io/sample-documentation/img/docusaurus.png"/><link rel="shortcut icon" href="/sample-documentation/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://hpcanalytics.github.io/sample-documentation/blog/atom.xml" title="HPAnalytics Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://hpcanalytics.github.io/sample-documentation/blog/feed.xml" title="HPAnalytics Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/sample-documentation/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/sample-documentation/"><img class="logo" src="/sample-documentation/img/docusaurus.svg" alt="HPAnalytics"/><h2 class="headerTitleWithLogo">HPAnalytics</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/sample-documentation/docs/img_proc" target="_self">Doc</a></li><li class=""><a href="/sample-documentation/docs/doc4" target="_self">API</a></li><li class=""><a href="/sample-documentation/help" target="_self">Help</a></li><li class=""><a href="/sample-documentation/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Image proc</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Image proc</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/sample-documentation/docs/img_proc">Image Processing</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">First Category</h3><ul><li class="navListItem"><a class="navItem" href="/sample-documentation/docs/doc2">document number 2</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Second Category</h3><ul><li class="navListItem"><a class="navItem" href="/sample-documentation/docs/doc3">This is document number 3</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Image Processing</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="welcome"></a><a href="#welcome" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Welcome</h1>
+<p>This site features documentation on the image processing and optimization routines available in SPIDAL.</p>
+<p>A basic philosophy underlying SPIDAL is that <em>many problems in AI-related domains</em>
+(including machine learning, image understanding,  computer vision, etc) <em>can be posed and solved using
+one of a relatively small number of general techniques.</em> Instead of re-inventing algorithms that are
+customized for a particular application, we advocate posing new problems in terms of  general and abstract
+techniques. For example, many problems involving analyzing sequences can be posed as Hidden Markov Models,
+whether the sequences are sentences, positions of objects across time, audio signals, or protein sequences.</p>
+<p>This view encourages separating applications, models,  algorithms, and implementations to maximize generalization and
+code reuse. An <em>application</em> involves solving a particular domain-specific problem. Many such domain-specific tasks
+can be posed in terms of a <em>model</em> that precisely defines a mathematical problem to be solved.
+Different models may make different assumptions, trading off between
+simplicity and faithfulness to the original problem.
+An <em>algorithm</em> is a particular strategy for solving for unknown variables in that model.
+Different algorithms can be used to solve a given model, often with different trade-offs
+between accuracy and speed.
+An <em>implementation</em> is one particular set of source codes for executing an algorithm. Implementations
+may use heuristics or simplifications to improve practical results or decrease running time of an algorithm.</p>
+<h1><a class="anchor" aria-hidden="true" id="contents"></a><a href="#contents" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contents</h1>
+<p>The goal of this site is to help choose the right model and algorithm abstractions for a given novel problem,
+and then apply SPIDAL codes to these new problems.
+Thus in addition to information about how to use the libraries themselves, we include background information about what these routines do, how they work, and when to use them, and show examples of their use on real problems.</p>
+<p>You can use this resource in several different ways:</p>
+<ul>
+<li><p>If you'd like to see how to apply SPIDAL algorithms to real problems, see <a href="#exemplar-applications">Exemplar Applications</a>.</p></li>
+<li><p>If you'd like to learn more about a particular model, see <a href="#models">Models</a>.</p></li>
+<li><p>If you'd like to learn more about a particular algorithm, see <a href="#algorithms">Algorithms</a>.</p></li>
+</ul>
+<!--- [](If you have a problem to solve and need to choose a model or algorithm see Documentation by Problem Type.) -->
+<hr>
+<h1><a class="anchor" aria-hidden="true" id="exemplar-applications"></a><a href="#exemplar-applications" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplar applications</h1>
+<h2><a class="anchor" aria-hidden="true" id="3d-reconstruction-of-polar-ice"></a><a href="#3d-reconstruction-of-polar-ice" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3D Reconstruction of Polar Ice</h2>
+<p><img src="http://vision.soic.indiana.edu/papers/thumbs/icesurface2017icip-thumb.png" alt=""></p>
+<h4><a class="anchor" aria-hidden="true" id="reconstructs-the-three-dimensional-surface-of-bedrock-under-polar-ice-using-tomographic-slices-from-ground-penetrating-radar-echograms"></a><a href="#reconstructs-the-three-dimensional-surface-of-bedrock-under-polar-ice-using-tomographic-slices-from-ground-penetrating-radar-echograms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reconstructs the three-dimensional surface of bedrock under polar ice using tomographic slices from ground-penetrating radar echograms.</h4>
+<ul>
+<li><a href="http://vision.soic.indiana.edu/papers/icesurface2017icip.pdf">Research paper (IEEE International Conference on Image Processing 2017)</a></li>
+<li><a href="http://vision.soic.indiana.edu/projects/icelayers/">Research project website</a></li>
+<li>Technologies: Image reconstruction, image recognition, discrete optimization, probabilistic inference</li>
+<li>Models: <a href="#spatial-models">Markov Random Fields</a></li>
+<li>Algorithms: <a href="#discrete-optimization">Loopy Belief Propagation</a>, <a href="#discrete-optimization">Tree-reweighted Message Passing</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="segmentation-of-radar-echograms"></a><a href="#segmentation-of-radar-echograms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Segmentation of Radar Echograms</h2>
+<p><img src="http://vision.soic.indiana.edu/papers/thumbs/icelayers2014icip-thumb.png" alt=""></p>
+<h4><a class="anchor" aria-hidden="true" id="segments-location-bedrock-ice-and-air-in-radar-echograms-of-polar-ice"></a><a href="#segments-location-bedrock-ice-and-air-in-radar-echograms-of-polar-ice" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Segments location bedrock, ice, and air in radar echograms of polar ice.</h4>
+<ul>
+<li><a href="http://vision.soic.indiana.edu/papers/icesheets2012icpr.pdf">Research paper (IEEE International Conference on Pattern Recognition 2012)</a></li>
+<li><a href="http://vision.soic.indiana.edu/projects/icelayers/">Research project website</a></li>
+<li>Technologies: Image segmentation, discrete optimization, probabilistic inference</li>
+<li>Models: <a href="#sequence-models">Hidden Markov Models</a></li>
+<li>Algorithms: <a href="#sequence-model-inference">Viterbi</a></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="identifies-layer-boundaries-in-radar-echograms-including-soft-confidence-bounds-on-layer-locations"></a><a href="#identifies-layer-boundaries-in-radar-echograms-including-soft-confidence-bounds-on-layer-locations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Identifies layer boundaries in radar echograms, including &quot;soft&quot; confidence bounds on layer locations.</h4>
+<ul>
+<li><a href="http://vision.soic.indiana.edu/papers/icelayers2014icip.pdf">Research paper (IEEE International Conference on Image Processing 2014)</a></li>
+<li><a href="http://vision.soic.indiana.edu/projects/icelayers/">Research project website</a></li>
+<li>Technologies: Image segmentation, discrete optimization, probabilistic inference</li>
+<li>Models: <a href="#sequence-models">Hidden Markov Models</a>, <a href="#spatial-models">Markov Random Fields</a></li>
+<li>Algorithms: <a href="#sequence-model-inference">Markov Chain Monte Carlo</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="3d-reconstruction-of-landmarks-from-social-media-images"></a><a href="#3d-reconstruction-of-landmarks-from-social-media-images" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3D Reconstruction of Landmarks from Social Media images</h2>
+<p><img src="http://vision.soic.indiana.edu/papers/thumbs/sfm2011cvpr-thumb.png" alt=""></p>
+<h4><a class="anchor" aria-hidden="true" id="creates-three-dimensional-reconstructions-of-buildings-and-other-landmarks-from-images-downloaded-from-social-media"></a><a href="#creates-three-dimensional-reconstructions-of-buildings-and-other-landmarks-from-images-downloaded-from-social-media" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creates three-dimensional reconstructions of buildings and other landmarks from images downloaded from social media.</h4>
+<ul>
+<li><a href="http://vision.soic.indiana.edu/papers/disco2013pami.pdf">Research paper (IEEE Transactions on Pattern Analysis and Machine Intelligence 2013)</a></li>
+<li><a href="http://vision.soic.indiana.edu/disco/">Research project website</a></li>
+<li>Technologies: Discrete optimization, continuous optimization, image feature point extraction</li>
+<li>Models: <a href="#spatial-models">Markov Random Fields</a>, <a href="#regression-models">Non-linear Least Squares</a></li>
+<li>Algorithms: <a href="#discrete-optimization">Loopy Belief Propagation</a>, <a href="#continuous-optimization">Levenberg-Marquardt</a>, <a href="#image-processing-and-computer-vision">Scale Invariant Feature Transforms</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="multi-modal-photo-clustering"></a><a href="#multi-modal-photo-clustering" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multi-modal Photo Clustering</h2>
+<p><img src="http://vision.soic.indiana.edu/papers/thumbs/multimodal2014cvpr-thumb.png" alt=""></p>
+<h4><a class="anchor" aria-hidden="true" id="clusters-large-scale-collections-of-images-by-combining-visual-temporal-spatial-and-textual-features"></a><a href="#clusters-large-scale-collections-of-images-by-combining-visual-temporal-spatial-and-textual-features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Clusters large-scale collections of images by combining visual, temporal, spatial, and textual features.</h4>
+<ul>
+<li><a href="http://vision.soic.indiana.edu/papers/multimodal2014cvpr.pdf">Research paper (IEEE Computer Vision and Pattern Recognition 2014)</a></li>
+<li>Technologies: Clustering, discrete optimization, image feature  extraction</li>
+<li>Models: <a href="#spatial-models">Markov Random Fields</a>, <a href="#image-features">Bag-of-words</a></li>
+<li>Algorithms: <a href="#discrete-optimization">Tree-reweighted Message Passing</a>, <a href="#clustering-and-grouping">K-means</a>, <a href="#image-processing-and-computer-vision">Scale Invariant Feature Transforms</a></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="organizes-and-visualizes-social-media-images-using-multimodal-features"></a><a href="#organizes-and-visualizes-social-media-images-using-multimodal-features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Organizes and visualizes social media images using multimodal features.</h4>
+<ul>
+<li><a href="http://vision.soic.indiana.edu/papers/mapping2009www.pdf">Research paper (World Wide Web Conference 2009)</a></li>
+<li><a href="http://www.cs.indiana.edu/~djcran/photomap/">Research project website</a></li>
+<li>Technologies: Clustering, image feature extraction</li>
+<li>Models: <a href="#image-features">Bag-of-words</a>, <a href="#classification-models">Support vector machines</a></li>
+<li>Algorithms: <a href="#clustering-and-grouping">K-means</a>, <a href="#clustering-and-grouping">Mean shift</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="photo-segmentation"></a><a href="#photo-segmentation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Photo segmentation</h2>
+<p><img src="http://vision.soic.indiana.edu/papers/thumbs/mcl2016nips-thumb.png" alt=""></p>
+<h4><a class="anchor" aria-hidden="true" id="produces-multiple-diverse-candidate-solutions-for-pixel-level-semantic-photo-labeling"></a><a href="#produces-multiple-diverse-candidate-solutions-for-pixel-level-semantic-photo-labeling" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Produces multiple diverse candidate solutions for pixel-level semantic photo labeling.</h4>
+<ul>
+<li><a href="http://vision.soic.indiana.edu/papers/mcl2016nips.pdf">Research paper (Neural Information Processing Systems 2016)</a></li>
+<li>Technologies: Segmentation, deep learning, discrete optimization</li>
+<li>Models: <a href="#spatial-models">Markov Random Fields</a>, <a href="#regression-models">Deep Neural Networks</a></li>
+<li>Algorithms:  <a href="#continuous-optimization">Gradient Descent</a>, <a href="#discrete-optimization">Tree-reweighted Message Passing</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="image-recognition"></a><a href="#image-recognition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Image recognition</h2>
+<p><img src="http://vision.soic.indiana.edu/papers/thumbs/landmarks2015book-thumb.png" alt=""></p>
+<h4><a class="anchor" aria-hidden="true" id="estimates-where-on-earth-a-photo-was-taken-using-visual-textual-and-temporal-features"></a><a href="#estimates-where-on-earth-a-photo-was-taken-using-visual-textual-and-temporal-features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Estimates where on Earth a photo was taken using visual, textual, and temporal features.</h4>
+<ul>
+<li><a href="http://vision.soic.indiana.edu/papers/landmarks2015book.pdf">Research paper (Book Chapter)</a></li>
+<li>Technologies: Recognition, deep learning, discrete optimization, continuous optimization, image feature extraction</li>
+<li>Models: <a href="#sequence-models">Hidden Markov Models</a>, <a href="#regression-models">Deep Neural Networks</a>, <a href="#classification-models">Support Vector Machines</a>, <a href="#image-features">Bag-of-words</a></li>
+<li>Algorithms: <a href="#sequence-model-inference">Viterbi</a>,  <a href="#continuous-optimization">Gradient Descent</a>, <a href="#clustering-and-grouping">K-means</a>, <a href="#clustering-and-grouping">k-nearest neighbors</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="image-captioning"></a><a href="#image-captioning" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Image captioning</h2>
+<p><img src="http://vision.soic.indiana.edu/papers/thumbs/deepdiary2016eccvw-thumb.png" alt=""></p>
+<h4><a class="anchor" aria-hidden="true" id="automatically-produces-diverse-captions-to-describe-an-image"></a><a href="#automatically-produces-diverse-captions-to-describe-an-image" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Automatically produces diverse captions to describe an image.</h4>
+<ul>
+<li><a href="http://vision.soic.indiana.edu/papers/deepdiary2016eccvw.pdf">Research paper (ECCV Workshop 2016)</a></li>
+<li><a href="http://vision.soic.indiana.edu/projects/deepdiary/">Research project website</a></li>
+<li>Technologies: Deep learning, discrete optimization</li>
+<li>Models: <a href="#sequence-models">Hidden Markov Models</a>, <a href="#regression-models">Deep Neural Networks</a>, <a href="#sequence-models">Long-short Term Memories</a></li>
+<li>Algorithms: <a href="#sequence-model-inference">Viterbi</a>, <a href="#continuous-optimization">Gradient Descent</a></li>
+</ul>
+<hr>
+<h1><a class="anchor" aria-hidden="true" id="algorithms"></a><a href="#algorithms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithms</h1>
+<p>SPIDAL implementations are available for algorithms that solve various models and problems. The links below lead
+to more information about the algorithms, as well as source code and documentation.</p>
+<h2><a class="anchor" aria-hidden="true" id="sequence-model-inference"></a><a href="#sequence-model-inference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sequence model inference</h2>
+<ul>
+<li><a href="https://github.com/hpcanalytics/Hidden-Markov-Model/tree/master/algorithm.viterbi">Viterbi algorithm</a> for exact Maximum A Posteriori (MAP) inference</li>
+<li><a href="https://github.com/hpcanalytics/Hidden-Markov-Model/tree/master/algorithm.forward-backward">Forward-Backward algorithm</a> for exact marginal inference</li>
+<li><a href="https://github.com/hpcanalytics/Hidden-Markov-Model/tree/master/algorithm.mcmc">Markov Chain Monte Carlo (MCMC)</a> for approximate MAP inference</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="discrete-optimization"></a><a href="#discrete-optimization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Discrete optimization</h2>
+<ul>
+<li><a href="https://github.com/hpcanalytics/Markov-Random-Field/tree/master/algorithm.Loopy-Belief-Propoagation">Loopy Belief Propagation</a> for approximate optimization of <a href="#spatial-models">Markov Random Fields</a></li>
+<li><a href="https://github.com/hpcanalytics/Markov-Random-Field/tree/master/algorithm.TRW-S">Tree Reweighted Message Passing (TRW-S)</a> for approximate optimization of <a href="#spatial-models">Markov Random Fields</a></li>
+<li>Gibbs Sampling for approximate inference on <a href="#spatial-models">Markov Random Fields</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="continuous-optimization"></a><a href="#continuous-optimization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Continuous optimization</h2>
+<ul>
+<li>Levenberg-Marquardt - non-linear least squares</li>
+<li>Gradient descent</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="clustering-and-grouping"></a><a href="#clustering-and-grouping" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Clustering and grouping</h2>
+<ul>
+<li><a href="https://github.com/hpcanalytics/Clustering-and-Grouping/tree/master/algorithm.k-means">K-means clustering</a></li>
+<li><a href="https://github.com/hpcanalytics/Clustering-and-Grouping/tree/master/algorithm.mean-shift">Mean shift clustering</a></li>
+<li>Approximate all-pairs similarity search</li>
+<li>Deterministic Annealing</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="dimensionality-reduction"></a><a href="#dimensionality-reduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dimensionality reduction</h2>
+<ul>
+<li>Multidimensional Scaling (MDS)</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="image-processing-and-computer-vision"></a><a href="#image-processing-and-computer-vision" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Image processing and computer vision</h2>
+<ul>
+<li>Unsupervised image segmentation</li>
+<li>Image alignment</li>
+<li>Edge detection</li>
+<li>Scale Invariant Feature Transform</li>
+</ul>
+<hr>
+<h1><a class="anchor" aria-hidden="true" id="models"></a><a href="#models" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Models</h1>
+<h2><a class="anchor" aria-hidden="true" id="sequence-models"></a><a href="#sequence-models" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sequence models</h2>
+<ul>
+<li><a href="https://github.com/hpcanalytics/Hidden-Markov-Model">Hidden Markov Models</a></li>
+<li>Long-short Term Memory models</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="spatial-models"></a><a href="#spatial-models" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Spatial models</h2>
+<ul>
+<li><a href="https://github.com/hpcanalytics/Markov-Random-Field">Markov Random Fields</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="classification-models"></a><a href="#classification-models" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Classification models</h2>
+<ul>
+<li>Nearest neighbor</li>
+<li>Support Vector Machines</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="regression-models"></a><a href="#regression-models" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Regression models</h2>
+<ul>
+<li>Non-linear least squares</li>
+<li>Deep Neural Networks</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="image-features"></a><a href="#image-features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Image features</h2>
+<ul>
+<li>Edges</li>
+<li>Interest points</li>
+<li>Bag of words models</li>
+</ul>
+<iframe width="420" height="315" src="http://www.youtube.com/embed/oGqp_fAv5S8" frameborder="0" allowfullscreen></iframe>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/sample-documentation/docs/doc2"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#3d-reconstruction-of-polar-ice">3D Reconstruction of Polar Ice</a></li><li><a href="#segmentation-of-radar-echograms">Segmentation of Radar Echograms</a></li><li><a href="#3d-reconstruction-of-landmarks-from-social-media-images">3D Reconstruction of Landmarks from Social Media images</a></li><li><a href="#multi-modal-photo-clustering">Multi-modal Photo Clustering</a></li><li><a href="#photo-segmentation">Photo segmentation</a></li><li><a href="#image-recognition">Image recognition</a></li><li><a href="#image-captioning">Image captioning</a></li><li><a href="#sequence-model-inference">Sequence model inference</a></li><li><a href="#discrete-optimization">Discrete optimization</a></li><li><a href="#continuous-optimization">Continuous optimization</a></li><li><a href="#clustering-and-grouping">Clustering and grouping</a></li><li><a href="#dimensionality-reduction">Dimensionality reduction</a></li><li><a href="#image-processing-and-computer-vision">Image processing and computer vision</a></li><li><a href="#sequence-models">Sequence models</a></li><li><a href="#spatial-models">Spatial models</a></li><li><a href="#classification-models">Classification models</a></li><li><a href="#regression-models">Regression models</a></li><li><a href="#image-features">Image features</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/sample-documentation/" class="nav-home"><img src="/sample-documentation/img/docusaurus.svg" alt="HPAnalytics" width="66" height="58"/></a><div><h5>Docs</h5><a href="/sample-documentation/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/sample-documentation/docs/en/doc2.html">Guides (or other categories)</a><a href="/sample-documentation/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/sample-documentation/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/sample-documentation/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/sample-documentation/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2018 Indiana University</section></footer></div></body></html>
