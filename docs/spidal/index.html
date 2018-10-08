@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>SPIDAL Core Algorithms · HPAnalytics</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# DA-MDS"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="SPIDAL Core Algorithms · HPAnalytics"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hpcanalytics.github.io/documentation/index.html"/><meta property="og:description" content="# DA-MDS"/><meta property="og:image" content="https://hpcanalytics.github.io/documentation/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hpcanalytics.github.io/documentation/img/docusaurus.png"/><link rel="shortcut icon" href="/documentation/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://hpcanalytics.github.io/documentation/blog/atom.xml" title="HPAnalytics Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://hpcanalytics.github.io/documentation/blog/feed.xml" title="HPAnalytics Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/documentation/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/documentation/"><img class="logo" src="/documentation/img/docusaurus.svg" alt="HPAnalytics"/><h2 class="headerTitleWithLogo">HPAnalytics</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/documentation/docs/img_proc" target="_self">Doc</a></li><li class=""><a href="/documentation/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Core SPIDAL</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Image Processing</h3><ul><li class="navListItem"><a class="navItem" href="/documentation/docs/img_proc">Image Processing</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Core SPIDAL</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/documentation/docs/spidal">SPIDAL Core Algorithms</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Harp</h3><ul><li class="navListItem"><a class="navItem" href="/documentation/docs/harp">HARP</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">SPIDAL Core Algorithms</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="da-mds"></a><a href="#da-mds" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DA-MDS</h1>
+<p>Deterministic Annealing Multidimensional Scaling (DA-MDS) is a high performance
+implementation of the <a href="http://grids.ucs.indiana.edu/ptliupages/publications/WDA-SMACOF_v1.02.pdf">WDA-SMACOF</a>
+algorithm.</p>
+<h2><a class="anchor" aria-hidden="true" id="success-stories"></a><a href="#success-stories" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Success Stories</h2>
+<ul>
+<li>Million Sequence Clustering at <a href="http://salsahpc.indiana.edu/millionseq/">http://salsahpc.indiana.edu/millionseq/</a></li>
+<li>The Fungi Phylogenetic Project at <a href="http://salsafungiphy.blogspot.com/">http://salsafungiphy.blogspot.com/</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="prerequisites"></a><a href="#prerequisites" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prerequisites</h2>
+<ol>
+<li>Operating System</li>
+</ol>
+<ul>
+<li>SPDIAL is extensively tested and known to work on,
+<ul>
+<li>Red Hat Enterprise Linux Server release 6.7 (Santiago)</li>
+<li>Red Hat Enterprise Linux Server release 5.10 (Tikanga)</li>
+<li>Ubuntu 12.04.3 LTS</li>
+<li>Ubuntu 12.10</li>
+</ul></li>
+<li>This may work in Windows systems depending on the ability to setup OpenMPI properly, however, this has not been tested and we recommend choosing a Linux based operating system instead.</li>
+</ul>
+<ol start="2">
+<li>Java</li>
+</ol>
+<ul>
+<li>Download Oracle JDK 8 from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a></li>
+<li>Extract the archive to a folder named <code>jdk1.8.0</code></li>
+<li>Set the following environment variables.</li>
+</ul>
+<pre><code class="hljs">  <span class="hljs-attribute">JAVA_HOME</span>=&lt;path-to-jdk1.8.0-directory&gt;
+  <span class="hljs-attribute">PATH</span>=<span class="hljs-variable">$JAVA_HOME</span>/bin:$PATH
+  <span class="hljs-builtin-name">export</span> JAVA_HOME PATH
+</code></pre>
+<ol start="3">
+<li>Apache Maven</li>
+</ol>
+<ul>
+<li>Download latest Maven release from <a href="http://maven.apache.org/download.cgi">http://maven.apache.org/download.cgi</a></li>
+<li>Extract it to some folder and set the following environment variables.</li>
+</ul>
+<pre><code class="hljs">  <span class="hljs-attribute">MVN_HOME</span>=&lt;path-to-Maven-folder&gt;
+  <span class="hljs-variable">$PATH</span>=<span class="hljs-variable">$MVN_HOME</span>/bin:<span class="hljs-variable">$PATH</span>
+  <span class="hljs-builtin-name">export</span> MVN_HOME PATH
+</code></pre>
+<ol start="5">
+<li>OpenMPI</li>
+</ol>
+<ul>
+<li><p>We recommend using <code>OpenMPI 1.10.1</code> although it work with the previous 1.8 versions. Note, if using a version other than 1.10.1 please remember to set Maven dependency appropriately in the <code>pom.xml</code>.</p></li>
+<li><p>Download OpenMPI 1.10.1 from <a href="http://www.open-mpi.org/software/ompi/v1.10/downloads/openmpi-1.10.1.tar.gz">http://www.open-mpi.org/software/ompi/v1.10/downloads/openmpi-1.10.1.tar.gz</a></p></li>
+<li><p>Extract the archive to a folder named <code>openmpi-1.10.1</code></p></li>
+<li><p>Also create a directory named <code>build</code> in some location. We will use this to install OpenMPI</p></li>
+<li><p>Set the following environment variables</p></li>
+</ul>
+<pre><code class="hljs">  <span class="hljs-keyword">BUILD</span>=&lt;<span class="hljs-keyword">path</span>-<span class="hljs-keyword">to</span>-<span class="hljs-keyword">build</span>-directory&gt;
+  OMPI_1101=&lt;<span class="hljs-keyword">path</span>-<span class="hljs-keyword">to</span>-openmpi<span class="hljs-number">-1.10</span><span class="hljs-number">.1</span>-directory&gt;
+  <span class="hljs-keyword">PATH</span>=$<span class="hljs-keyword">BUILD</span>/bin:$<span class="hljs-keyword">PATH</span>
+  LD_LIBRARY_PATH=$<span class="hljs-keyword">BUILD</span>/lib:$LD_LIBRARY_PATH
+  export <span class="hljs-keyword">BUILD</span> OMPI_1101 <span class="hljs-keyword">PATH</span> LD_LIBRARY_PATH
+</code></pre>
+<ul>
+<li>The instructions to build OpenMPI depend on the platform. Therefore, we highly recommend looking into the <code>$OMPI_1101/INSTALL</code> file. Platform specific build files are available in <code>$OMPI_1101/contrib/platform</code> directory.</li>
+<li>In general, please specify <code>--prefix=$BUILD</code> and <code>--enable-mpi-java</code> as arguments to <code>configure</code> script. If Infiniband is available (highly recommended) specify <code>--with-verbs=&lt;path-to-verbs-installation&gt;</code>. Usually, the path to verbs installation is <code>/usr</code>. In summary, the following commands will build OpenMPI for a Linux system.</li>
+</ul>
+<pre><code class="hljs">  <span class="hljs-built_in">cd</span> <span class="hljs-variable">$OMPI_1101</span>
+  ./configure --prefix=<span class="hljs-variable">$BUILD</span> --<span class="hljs-built_in">enable</span>-mpi-java
+  make;make install
+</code></pre>
+<ul>
+<li>If everything goes well <code>mpirun --version</code> will show <code>mpirun (Open MPI) 1.10.1</code>. Execute the following command to instal <code>$OMPI_1101/ompi/mpi/java/java/mpi.jar</code> as a Maven artifact.</li>
+</ul>
+<pre><code class="hljs">  mvn install:install-file <span class="hljs-attribute">-DcreateChecksum</span>=<span class="hljs-literal">true</span> <span class="hljs-attribute">-Dpackaging</span>=jar <span class="hljs-attribute">-Dfile</span>=<span class="hljs-variable">$OMPI_1101</span>/ompi/mpi/java/java/mpi.jar <span class="hljs-attribute">-DgroupId</span>=ompi <span class="hljs-attribute">-DartifactId</span>=ompijavabinding <span class="hljs-attribute">-Dversion</span>=1.10.1
+</code></pre>
+<ul>
+<li>Few examples are available in <code>$OMPI_1101/examples</code>. Please use <code>mpijavac</code> with other parameters similar to <code>javac</code> command to compile OpenMPI Java programs. Once compiled <code>mpirun [options] java -cp &lt;classpath&gt; class-name arguments</code> command with proper values set as arguments will run the MPI Java program.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="building-da-mds"></a><a href="#building-da-mds" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Building DA-MDS</h2>
+<ul>
+<li>Check all prerequisites are satisfied before building DA-MDS</li>
+<li>Clone this git repository from <code>git@github.com:DSC-SPIDAL/damds.git</code> Let's call this directory <code>damdshome</code></li>
+<li>Once above two steps are completed, building DA-MDS requires only one command, <code>mvn install</code>, issued within <code>damdshome</code>.</li>
+</ul>
+<p>Note : If you have not built <a href="https://github.com/DSC-SPIDAL/common">https://github.com/DSC-SPIDAL/common</a> library locally please follow the following instructions</p>
+<p>Please follow the following instructions to build this project with maven
+This is needed because of an SSL certificate issue with a dependency maven repo</p>
+<p>execute the following commands from the root directory of the repo</p>
+<pre><code class="hljs">keytool -import -file ./resources/ricecert/cs<span class="hljs-selector-class">.rice</span><span class="hljs-selector-class">.edu</span><span class="hljs-selector-class">.cer</span> -keystore /tmp/riceKeyStore
+</code></pre>
+<p>You can change the name of the key store and the path to it if you prefer to.
+This command will first ask for a password, provide any password of your choosing with at least 6 characters
+then it will show the following</p>
+<pre><code class="hljs">Trust <span class="hljs-keyword">this</span> certificate? [<span class="hljs-literal">no</span>]: 
+</code></pre>
+<p>type &quot;y&quot; and then press enter. Now the cert has been properly installed.
+Next use the following command to compile the code</p>
+<pre><code class="hljs">mvn -Djavax<span class="hljs-selector-class">.net</span><span class="hljs-selector-class">.ssl</span><span class="hljs-selector-class">.trustStore</span>=/tmp/riceKeyStore clean install
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="running-da-mds"></a><a href="#running-da-mds" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Running DA-MDS</h2>
+<p>The following shell script may be used with necessary modifications to run the program.</p>
+<pre><code class="hljs css language-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+<span class="hljs-comment"># Java classpath. This should include paths to damds dependent jar files and the damds-1.0.jar</span>
+<span class="hljs-comment"># The dependent jar files may be obtained by running mvn dependency:build-classpath command within damdshome</span>
+cp=&lt;classpath&gt;
+
+<span class="hljs-comment"># Obtain working directory</span>
+wd=`<span class="hljs-built_in">pwd</span>`
+<span class="hljs-comment"># Character x as a variable</span>
+x=<span class="hljs-string">'x'</span>
+
+<span class="hljs-comment"># A text file listing available nodes</span>
+hosts=&lt;path-to-hostfile&gt;
+<span class="hljs-comment"># Number of nodes</span>
+nodes=&lt;num-nodes&gt;
+<span class="hljs-comment"># Number of cores per node</span>
+cpn=8
+
+<span class="hljs-comment"># Options for Java runtime</span>
+jopts=<span class="hljs-string">"-Xms64M -Xmx64M"</span>
+
+<span class="hljs-comment"># Number of threads to use within one dapwc process</span>
+tpn=&lt;threads-per-process&gt;
+<span class="hljs-comment"># Number of processes per node</span>
+ppn=&lt;processes-per-node&gt;
+<span class="hljs-comment"># Total parallelism expressed as a pattern TxPxN</span>
+<span class="hljs-comment"># where T is number of threads per process, P is processes per node, and N is total nodes</span>
+pat=<span class="hljs-variable">$tpn</span><span class="hljs-variable">$x</span><span class="hljs-variable">$ppn</span><span class="hljs-variable">$x</span><span class="hljs-variable">$nodes</span>
+
+<span class="hljs-comment"># Number of computing units assigned per process, assuming $cpn is divisible by $ppn</span>
+bw=$((<span class="hljs-variable">$cpn</span>/<span class="hljs-variable">$ppn</span>))
+
+mmaps=1
+<span class="hljs-comment"># Directory to memory map. Ideally, set this to where tmpfs is in Linux</span>
+mmapdir=/dev/shm/<span class="hljs-variable">$USER</span>
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"Running <span class="hljs-variable">$pat</span> on `date`"</span> &gt;&gt; status.txt
+<span class="hljs-comment"># Invoke MPI to run dapwc</span>
+mpirun --report-bindings --mca btl ^tcp --hostfile <span class="hljs-variable">$hostfile</span> --map-by ppr:<span class="hljs-variable">$ppn</span>:node:PE=<span class="hljs-variable">$bw</span> --rank-by core -np $((<span class="hljs-variable">$nodes</span>*<span class="hljs-variable">$ppn</span>)) java <span class="hljs-variable">$jopts</span> -cp <span class="hljs-variable">$cp</span> edu.indiana.soic.spidal.damds.Program -c config<span class="hljs-variable">$pat</span>.properties -n <span class="hljs-variable">$nodes</span> -t <span class="hljs-variable">$tpn</span> -mmaps <span class="hljs-variable">$mmaps</span> -mmapdir <span class="hljs-variable">$mmapdir</span> | tee <span class="hljs-variable">$pat</span>/mds-out.txt
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"Finished <span class="hljs-variable">$pat</span> on `date`"</span> &gt;&gt; status.txt
+</code></pre>
+<p>The arguments listed in the <code>mpirun</code> command fall into three categories.</p>
+<ul>
+<li>OpenMPI Runtime Parameters
+<ul>
+<li><code>--report-bindings</code> requests OpenMPI runtime to output how processes are mapped to processing elements (cores) in the allocated nodes.</li>
+<li><code>--mca btl ^tcp</code> instructs to disable tcp, which is useful when running on Infiniband.</li>
+<li><code>--hostfile</code> indicates the file listing available nodes. Each node has to be a in a separate line.</li>
+<li><code>--map-by ppr:$ppn:node:PE=$bw</code> controls process mapping and binding. This is a topic on its own right, but the specific values in this example requests processes to be mapped by node while binding each to <code>bw</code> number of processing elements. A good set of slides on this topic is available at <a href="http://www.slideshare.net/jsquyres/open-mpi-explorations-in-process-affinity-eurompi13-presentation">http://www.slideshare.net/jsquyres/open-mpi-explorations-in-process-affinity-eurompi13-presentation</a></li>
+<li><code>-np $(($nodes*$ppn))</code> determines the total number of processes to run and in this case it is equal to <code>nodes*ppn</code></li>
+</ul></li>
+<li>Java Runtime Parameters
+<ul>
+<li><code>$jopts</code> in this case lists initial and maximum heap sizes for a JVM instance.</li>
+<li><code>-cp</code> indicates paths to find required classes where each entry is separated by a <code>:</code> (in Linux)</li>
+</ul></li>
+<li>Program (dapwc) Parameters
+<ul>
+<li><code>-c</code> points to the configuration file. This is a Java properties files listing values for each parameter that damds requires. Details on these parameters will follow in a later section.</li>
+<li><code>-n</code> indicates the total number of nodes</li>
+<li><code>-t</code> denotes the number of threads to use within one instance of damds</li>
+<li><code>-mmaps</code> is the number of memory maps to use. Set this to 1 for the best performance</li>
+<li><code>-mmapdir</code> points to the directory where memory maps should be created. Ideally, it should point to <code>tmpfs</code> directory in Linux</li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="configuring-damds"></a><a href="#configuring-damds" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuring damds</h2>
+<p>The following table summarizes the parameters used in dapwc.</p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Description</th><th>Default Value</th><th>Type</th></tr>
+</thead>
+<tbody>
+<tr><td>DistanceMatrixFile</td><td>Path of the pairwise distance file.</td><td>n/a</td><td>String</td></tr>
+<tr><td>WeightMatrixFile</td><td>Path of the pairwise weight matrix file or the simple linear weights text file.</td><td>n/a</td><td>String</td></tr>
+<tr><td>LabelDataFile</td><td>Path of the points' labels file.</td><td>n/a</td><td>String</td></tr>
+<tr><td>InitialPoints File</td><td>Path of the initial points file.</td><td>n/a</td><td>String</td></tr>
+<tr><td>PointsFile</td><td>Path of the output points file.</td><td>n/a</td><td>String</td></tr>
+<tr><td>TimingFile</td><td>Path of the output timing information.</td><td>n/a</td><td>String</td></tr>
+<tr><td>SummaryFile</td><td>Path of the output summary file.</td><td>n/a</td><td>String</td></tr>
+<tr><td>NumberDataPoints</td><td>Total number of data points.</td><td>n/a</td><td>Integer</td></tr>
+<tr><td>TargetDimension</td><td>Target dimension of the output points.</td><td>3</td><td>Integer</td></tr>
+<tr><td>DistanceTransform</td><td>Raise distances to the power of DistanceTransform.</td><td>1.0</td><td>Double</td></tr>
+<tr><td>Threshold</td><td>Stress threshold.</td><td>0.000001</td><td>Double</td></tr>
+<tr><td>Alpha</td><td>Cooling factor.</td><td>0.95</td><td>Double</td></tr>
+<tr><td>TminFactor</td><td>The minimum temperature factor.</td><td>0.5</td><td>Double</td></tr>
+<tr><td>StressIterations</td><td>The maximum number of stress loops to run.</td><td>10000</td><td>Integer</td></tr>
+<tr><td>CGIterations</td><td>The maximum number of conjugate gradient loops</td><td>20</td><td>Integer</td></tr>
+<tr><td>IsSammon</td><td>The flag to determine if sammon distances should be used</td><td>false</td><td>Boolean</td></tr>
+<tr><td>BlockSize</td><td>The block size to use in block matrix multiplication</td><td>64</td><td>Integer</td></tr>
+<tr><td>IsBigEndian</td><td>The flat to indicate the endianness of the binary distance file.</td><td>false</td><td>Boolean</td></tr>
+<tr><td>IsMemoryMapped</td><td>The flag to indicate if memory mapped files should be used to load data.</td><td>true</td><td>Boolean</td></tr>
+<tr><td>TransformationFunction</td><td>The path of the jar file containing additional distance transformations.</td><td>null</td><td>String</td></tr>
+<tr><td>WeightTransformationFunction</td><td>The path of the jar file containing additional weight transformations.</td><td>null</td><td>String</td></tr>
+<tr><td>Repetitions</td><td>The number of repetitions (see below).</td><td>1</td><td>Integer</td></tr>
+<tr><td>MaxTempLoops</td><td>The maximum number of temperature loops (see below).</td><td>0</td><td>Integer</td></tr>
+<tr><td>IsSimpleWeights</td><td>The flag to indicate if weights are read from a simple linear file.</td><td>false</td><td>Boolean</td></tr>
+</tbody>
+</table>
+<p><code>Repetitions</code> is a quick way to test large data sizes using a smaller original
+distances and weights files. For example with a NxN data set and a <code>Repetitions=2</code>,
+DA-MDS will do a 2Nx2N run. It does so by tiling the NxN matrix 4 times
+(2 horizontally and 2 vertically).</p>
+<p><code>MaxTempLoops</code> allows to test the program for performance without running for
+full convergence by allowing it to run only the specified number of temperature loops.
+Setting this to <code>0</code> will disable it and will do the full run.</p>
+<h2><a class="anchor" aria-hidden="true" id="acknowledgement"></a><a href="#acknowledgement" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Acknowledgement</h2>
+<p>We like to express our sincere gratitude to Prof. Vivek Sarkar
+and his team at Rice University for giving us access and
+continuous support for the HJ library. We are also
+thankful to FutureSystems project and its support team for their support with
+HPC systems. Also, we thank Intel  for their support of the Juliet cluster system
+that we used to test DA-MDS. Last but not least OpenMPI community deserves equal
+recognition for their valuable support.</p>
+<p>We also like to thank the following companies for providing us Open Source licences for their profiler software.</p>
+<p><img src="https://www.ej-technologies.com/images/product_banners/jprofiler_medium.png" alt="alt text"></p>
+<ul>
+<li>ej-technologies the creator of JProfiler  (<a href="http://www.ej-technologies.com/products/jprofiler/overview.html">http://www.ej-technologies.com/products/jprofiler/overview.html</a>)</li>
+</ul>
+<p><img src="https://www.yourkit.com/images/yklogo.png" alt="alt text"></p>
+<ul>
+<li>YourKit supports open source projects with its full-featured Java Profiler. YourKit, LLC is the creator of <a href="https://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a> and <a href="https://www.yourkit.com/.net/profiler/index.jsp">YourKit .NET Profiler</a>, innovative and intelligent tools for profiling Java and .NET applications</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/documentation/docs/img_proc"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/documentation/docs/harp"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#success-stories">Success Stories</a></li><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#building-da-mds">Building DA-MDS</a></li><li><a href="#running-da-mds">Running DA-MDS</a></li><li><a href="#configuring-damds">Configuring damds</a></li><li><a href="#acknowledgement">Acknowledgement</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/documentation/" class="nav-home"><img src="/documentation/img/docusaurus.svg" alt="HPAnalytics" width="66" height="58"/></a><div><h5>Docs</h5><a href="/documentation/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/documentation/docs/en/doc2.html">Guides (or other categories)</a><a href="/documentation/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/documentation/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/documentation/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/documentation/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2018 Indiana University</section></footer></div></body></html>

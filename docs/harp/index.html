@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>HARP · HPAnalytics</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# HARP"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="HARP · HPAnalytics"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hpcanalytics.github.io/documentation/index.html"/><meta property="og:description" content="# HARP"/><meta property="og:image" content="https://hpcanalytics.github.io/documentation/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hpcanalytics.github.io/documentation/img/docusaurus.png"/><link rel="shortcut icon" href="/documentation/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://hpcanalytics.github.io/documentation/blog/atom.xml" title="HPAnalytics Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://hpcanalytics.github.io/documentation/blog/feed.xml" title="HPAnalytics Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/documentation/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/documentation/"><img class="logo" src="/documentation/img/docusaurus.svg" alt="HPAnalytics"/><h2 class="headerTitleWithLogo">HPAnalytics</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/documentation/docs/img_proc" target="_self">Doc</a></li><li class=""><a href="/documentation/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Harp</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Image Processing</h3><ul><li class="navListItem"><a class="navItem" href="/documentation/docs/img_proc">Image Processing</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Core SPIDAL</h3><ul><li class="navListItem"><a class="navItem" href="/documentation/docs/spidal">SPIDAL Core Algorithms</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Harp</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/documentation/docs/harp">HARP</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">HARP</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="harp"></a><a href="#harp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HARP</h1>
+<p>@Copyright 2013-2018 Inidana University
+Apache License 2.0</p>
+<h2><a class="anchor" aria-hidden="true" id="what-is-harp"></a><a href="#what-is-harp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WHAT IS HARP?</h2>
+<p>Harp is a HPC-ABDS (High Performance Computing Enhanced Apache Big Data Stack) framework aiming to provide distributed
+machine learning and other data intensive applications.</p>
+<h2><a class="anchor" aria-hidden="true" id="highlights"></a><a href="#highlights" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Highlights</h2>
+<ol>
+<li>Plug into Hadoop ecosystem.</li>
+<li>Rich computation models for different machine learning/data intensive applications</li>
+<li>MPI-like Collective Communication operations</li>
+<li>High performance native kernels supporting many-core processors (e.g., Intel Xeon and Xeon Phi)</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="online-documentation"></a><a href="#online-documentation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Online Documentation</h2>
+<p>Please find the full documentation of Harp at <a href="https://dsc-spidal.github.io/harp/">https://dsc-spidal.github.io/harp/</a> including quick start, programming guide, and
+examples.</p>
+<h2><a class="anchor" aria-hidden="true" id="open-channels"></a><a href="#open-channels" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Open Channels</h2>
+<ol>
+<li>Google group - <a href="mailto:harp-users@googlegroups.com">harp-users@googlegroups.com</a></li>
+<li>Slack - <a href="https://apache-harp.slack.com">https://apache-harp.slack.com</a></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="installation-of-harp"></a><a href="#installation-of-harp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation of Harp</h2>
+<h3><a class="anchor" aria-hidden="true" id="install-from-binaries"></a><a href="#install-from-binaries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install from Binaries</h3>
+<p>Please download the binaries of Harp from <a href="https://github.com/DSC-SPIDAL/harp/releases">https://github.com/DSC-SPIDAL/harp/releases</a>.</p>
+<p>Copy the jar files to $HADOOP_HOME</p>
+<pre><code class="hljs css language-bash"><span class="hljs-comment">## the core modules </span>
+cp core/harp-hadoop-0.1.0.jar <span class="hljs-variable">$HADOOP_HOME</span>/share/hadoop/mapreduce/
+cp core/harp-collective-0.1.0.jar <span class="hljs-variable">$HADOOP_HOME</span>/share/hadoop/mapreduce/
+cp core/harp-daal-interface-0.1.0.jar <span class="hljs-variable">$HADOOP_HOME</span>/share/hadoop/mapreduce/
+<span class="hljs-comment">## the application modules </span>
+cp ml/harp-java-0.1.0.jar <span class="hljs-variable">$HADOOP_HOME</span>/
+cp ml/harp-daal-0.1.0.jar <span class="hljs-variable">$HADOOP_HOME</span>/
+cp contrib-0.1.0.jar <span class="hljs-variable">$HADOOP_HOME</span>/ 
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="install-from-source-code"></a><a href="#install-from-source-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install from Source Code</h3>
+<ol>
+<li>Install Maven by following the <a href="http://maven.apache.org/install.html">maven official instruction</a></li>
+<li>Compile harp by Maven with different hadoop versions</li>
+</ol>
+<pre><code class="hljs css language-bash"><span class="hljs-comment">## x.x.x could be 2.6.0, 2.7.5, and 2.9.0 </span>
+mvn clean package -Phadoop-x.x.x
+</code></pre>
+<ol start="3">
+<li>Copy compiled modules jar files to $HADOOP_HOME</li>
+</ol>
+<pre><code class="hljs css language-bash"><span class="hljs-built_in">cd</span> harp/
+<span class="hljs-comment">## the core modules </span>
+cp core/harp-hadoop/target/harp-hadoop-0.1.0.jar <span class="hljs-variable">$HADOOP_HOME</span>/share/hadoop/mapreduce/
+cp core/harp-collective/target/harp-collective-0.1.0.jar <span class="hljs-variable">$HADOOP_HOME</span>/share/hadoop/mapreduce/
+cp core/harp-daal-interface/target/harp-daal-interface-0.1.0.jar <span class="hljs-variable">$HADOOP_HOME</span>/share/hadoop/mapreduce/
+<span class="hljs-comment">## the application modules </span>
+cp ml/java/target/harp-java-0.1.0.jar <span class="hljs-variable">$HADOOP_HOME</span>/
+cp ml/daal/target/harp-daal-0.1.0.jar <span class="hljs-variable">$HADOOP_HOME</span>/
+cp contrib/target/contrib-0.1.0.jar <span class="hljs-variable">$HADOOP_HOME</span>/ 
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="add-third-party-dependencies"></a><a href="#add-third-party-dependencies" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add third party dependencies</h3>
+<p>Harp depends on a group of third party libraries. Make sure to install them before launching the applications</p>
+<pre><code class="hljs css language-bash"><span class="hljs-built_in">cd</span> third_party/
+<span class="hljs-comment">## JAR files</span>
+cp *.jar <span class="hljs-variable">$HADOOP_HOME</span>/share/hadoop/mapreduce/
+<span class="hljs-comment">## DAAL 2018</span>
+<span class="hljs-comment">## copy daal java API lib</span>
+cp daal-2018/lib/daal.jar <span class="hljs-variable">$HADOOP_HOME</span>/share/hadoop/mapreduce/
+<span class="hljs-comment">## copy native libs to HDFS</span>
+hdfs dfs -mkdir -p /Hadoop
+hdfs dfs -mkdir -p /Hadoop/Libraries
+hdfs dfs -put daal-2018/lib/intel64_lin/libJavaAPI.so /Hadoop/Libraries
+hdfs dfs -put tbb/lib/intel64_lin/gcc4.4/libtbb* /Hadoop/Libraries
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="installation-of-harp-daal-experimental-from-source-code"></a><a href="#installation-of-harp-daal-experimental-from-source-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation of Harp-DAAL-Experimental (from source code)</h2>
+<p>Harp-DAAL-Experimental only supports an installation from source code for now. Please follow the steps</p>
+<ol>
+<li>Pull the DAAL source code branch:  daal_2018 branch</li>
+</ol>
+<pre><code class="hljs css language-bash">git <span class="hljs-built_in">clone</span> -b daal_2018 git@github.com:DSC-SPIDAL/harp.git
+mv harp harp-daal-exp
+<span class="hljs-built_in">cd</span> harp-daal-exp
+</code></pre>
+<p>or git pull the submodule from third_party/daal-exp/</p>
+<pre><code class="hljs css language-bash"><span class="hljs-built_in">cd</span> harp/
+git submodule update --init --recursive
+<span class="hljs-built_in">cd</span> third_party/daal-exp/
+</code></pre>
+<ol start="2">
+<li>Compile the native library either by icc or gnu</li>
+</ol>
+<pre><code class="hljs css language-bash"><span class="hljs-comment">## use COMPILER=gun if icc is not available</span>
+make daal PLAT=lnx32e COMPILER=icc
+</code></pre>
+<ol start="3">
+<li>Setup DAALROOT environment variable by sourcing scripts from DAAL release codes.</li>
+</ol>
+<pre><code class="hljs css language-bash"><span class="hljs-built_in">source</span> ../__release_lnx/daal/bin/daalvars.sh intel64
+</code></pre>
+<ol start="4">
+<li>Compile harp-daal-experimental modules at Harp. Makesure that line 17 of harp/pom.xml file is uncommented and DAALROOT is setup by step 3.</li>
+</ol>
+<pre><code class="hljs css language-bash"><span class="hljs-comment">### check DAALROOT</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-variable">$DAALROOT</span>
+<span class="hljs-comment">### re-run maven to compile</span>
+mvn clean package -Phadoop-x.x.x
+</code></pre>
+<ol start="5">
+<li>Install compiled libraries.</li>
+</ol>
+<pre><code class="hljs css language-bash"><span class="hljs-comment">## copy Java API to Hadoop folder</span>
+cp ../__release_lnx/daal/lib/daal.jar <span class="hljs-variable">$HADOOP_HOME</span>/share/hadoop/mapreduce/
+<span class="hljs-comment">## copy harp-daal-exp libs</span>
+cp experimental/target/experimental-0.1.0.jar <span class="hljs-variable">$HADOOP_HOME</span>/
+<span class="hljs-comment">## copy native libs to HDFS </span>
+hdfs dfs -mkdir -p /Hadoop
+hdfs dfs -mkdir -p /Hadoop/Libraries
+hdfs dfs -put ../__release_lnx/daal/lib/intel64_lin/libJavaAPI.so /Hadoop/Libraries
+hdfs dfs -put ../__release_lnx/tbb/lib/intel64_lin/gcc4.4/libtbb* /Hadoop/Libraries
+hdfs dfs -put harp/third_party/omp/libiomp5.so /Hadoop/Libraries/
+hdfs dfs -put harp/third_party/hdfs/libhdfs.so* /Hadoop/Libraries/
+</code></pre>
+<p>The experimental codes have only been tested on Linux 64 bit platforme with Intel icc compiler and GNU compiler.</p>
+<h2><a class="anchor" aria-hidden="true" id="run-example-of-k-means"></a><a href="#run-example-of-k-means" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Run example of K-means</h2>
+<p>Make sure that harp-java-0.1.0.jar has been copied to $HADOOP_HOME.
+Start the Hadoop service</p>
+<pre><code class="hljs css language-bash"><span class="hljs-built_in">cd</span> <span class="hljs-variable">$HADOOP_HOME</span>
+sbin/start-dfs.sh
+sbin/start-yarn.sh
+</code></pre>
+<p>The usage of K-means is</p>
+<pre><code class="hljs css language-bash">hadoop jar harp-java-0.1.0.jar edu.iu.kmeans.regroupallgather.KMeansLauncher
+  &lt;num of points&gt; &lt;num of centroids&gt; &lt;vector size&gt; &lt;num of point files per worker&gt;
+  &lt;number of map tasks&gt; &lt;num threads&gt; &lt;number of iteration&gt; &lt;work dir&gt; &lt;<span class="hljs-built_in">local</span> points dir&gt;
+</code></pre>
+<p>For example:</p>
+<pre><code class="hljs css language-bash">hadoop jar harp-java-0.1.0.jar edu.iu.kmeans.regroupallgather.KMeansLauncher 1000 10 100 5 2 2 10 /kmeans /tmp/kmeans
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/documentation/docs/spidal"><span class="arrow-prev">← </span><span>Previous</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#what-is-harp">WHAT IS HARP?</a></li><li><a href="#highlights">Highlights</a></li><li><a href="#online-documentation">Online Documentation</a></li><li><a href="#open-channels">Open Channels</a></li><li><a href="#installation-of-harp">Installation of Harp</a><ul class="toc-headings"><li><a href="#install-from-binaries">Install from Binaries</a></li><li><a href="#install-from-source-code">Install from Source Code</a></li><li><a href="#add-third-party-dependencies">Add third party dependencies</a></li></ul></li><li><a href="#installation-of-harp-daal-experimental-from-source-code">Installation of Harp-DAAL-Experimental (from source code)</a></li><li><a href="#run-example-of-k-means">Run example of K-means</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/documentation/" class="nav-home"><img src="/documentation/img/docusaurus.svg" alt="HPAnalytics" width="66" height="58"/></a><div><h5>Docs</h5><a href="/documentation/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/documentation/docs/en/doc2.html">Guides (or other categories)</a><a href="/documentation/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/documentation/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/documentation/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/documentation/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2018 Indiana University</section></footer></div></body></html>
