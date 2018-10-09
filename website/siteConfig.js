@@ -14,7 +14,7 @@ const users = [
     caption: 'User1',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'https://hpcanalytics.github.io/sample-documentation/img/docusaurus.svg',
+    image: 'https://hpcanalytics.org/documentation/img/docusaurus.svg',
     infoLink: 'https://www.facebook.com',
     pinned: true,
   },
@@ -23,14 +23,14 @@ const users = [
 const siteConfig = {
   title: 'HPAnalytics', // Title for your website.
   tagline: 'High performance data analytics',
-  url: 'https://hpcanalytics.github.io', // Your website URL
-  baseUrl: '/documentation/', // Base URL for your project */
+  url: 'https://hpcanalytics.org', // Your website URL
+    baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'sample-documentation',
+  projectName: 'documentation',
   organizationName: 'hpcanalytics',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
