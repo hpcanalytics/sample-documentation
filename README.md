@@ -16,7 +16,7 @@ Lets briefly look at how to install Docusaurus. This step is only needed if you 
 
 ### Install NodeJs
 
-Follow the installtion instructions []Nodejs](https://nodejs.org/en/download/) and [Linux NodeJs](https://github.com/nodesource/distributions/blob/master/README.md)
+Follow the installtion instructions [Nodejs](https://nodejs.org/en/download/) and [Linux NodeJs](https://github.com/nodesource/distributions/blob/master/README.md)
 
 Here is how to install on Ubuntu or Debian
 
