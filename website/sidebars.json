@@ -2,6 +2,7 @@
   "docs": {
     "Image Processing": ["img_proc"],
     "Core SPIDAL": ["spidal"],
-    "Harp": ["harp"]
+    "Harp": ["harp"],
+    "People": ["people"]
   }
 }
