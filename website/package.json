@@ -9,7 +9,7 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
     "docusaurus": "^1.4.0"
   }
 }

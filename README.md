@@ -43,6 +43,12 @@ sudo apt-get update && sudo apt-get install yarn
 
 ### Install Docusaurus
 
+First go to website directory
+
+```bash
+cd website
+```
+
 ```bash
 sudo npm install -g docusaurus --unsafe-perm=true --allow-root
 
