@@ -12,4 +12,5 @@
 <url> <loc>https://hpcanalytics.org/docs/harp</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hpcanalytics.org/docs/harp" /> </url>
 <url> <loc>https://hpcanalytics.org/docs/img_proc</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hpcanalytics.org/docs/img_proc" /> </url>
 <url> <loc>https://hpcanalytics.org/docs/people</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hpcanalytics.org/docs/people" /> </url>
+<url> <loc>https://hpcanalytics.org/docs/publications</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hpcanalytics.org/docs/publications" /> </url>
 </urlset>
