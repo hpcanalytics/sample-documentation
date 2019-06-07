@@ -26,7 +26,7 @@ The user interface and modular design work equally well in complex scripted work
 MDAnalysis can read and write a very [wide range of file formats](https://www.mdanalysis.org/docs/documentation_pages/coordinates/init.html#id2) that are used in the biomolecular and materials science simulation communities. The library abstracts  access to the raw simulation data and presents a uniform object-oriented Python interface to the user. It thus enables users to rapidly write code that is portable and immediately usable.                
 MDAnalysis is written in Python and Cython and uses NumPy arrays for easy interoperability with the wider scientific Python ecosystem. 
             
-        
+<iframe width="420" height="315" src="https://www.youtube.com/embed/zVQGFysYDew" frameborder="0" allowfullscreen></iframe>        
      
 ## Who uses it?
 
@@ -39,4 +39,5 @@ MDAnalysis is [easy to install](https://www.mdanalysis.org/pages/installation_qu
 
 1. N. Michaud-Agrawal, E. J. Denning, T. B. Woolf, and O. Beckstein. MDAnalysis: A Toolkit for the Analysis of Molecular Dynamics Simulations. *J. Comput. Chem.* **32** (2011), 2319–2327. doi:[10.1002/jcc.21787](http://dx.doi.org/10.1002/jcc.21787)
 2. R. J. Gowers, M. Linke, J. Barnoud, T. J. E. Reddy, M. N. Melo, S. L. Seyler, D. L. Dotson, J. Domanski, S. Buchoux, I. M. Kenney, and O. Beckstein. MDAnalysis: A Python package for the rapid analysis of molecular dynamics simulations. *In* S. Benthall and S. Rostrup, editors, *Proceedings of the 15th Python in Science Conference*, pages 98-105, Austin, TX, 2016. SciPy. doi:[10.25080/Majora-629e541a-00e](https://doi.org/10.25080/Majora-629e541a-00e)
+
 
