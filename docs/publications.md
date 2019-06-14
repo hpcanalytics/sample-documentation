@@ -28,7 +28,6 @@ title: Publications
    <https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/hadoop-on-hpc.bib>`_]
    : hadoop-on-hpc `http://arxiv.org/abs/1602.00345
    <http://arxiv.org/abs/1602.00345>`_
-
 2. Pilot-Abstraction: A Valid Abstraction for Data-Intensive Application
    on HPC, Hadoop and Cloud Infrastructures?, Andre Luckow,
    Pradeep Mantha, Shantenu Jha pdf version
@@ -38,6 +37,15 @@ title: Publications
    Pradeep Mantha, Geoffrey C. Fox 2014 IEEE International Congress on
    Big Data (BigData Congress), 2014 pdf version
    `here <http://arxiv.org/abs/1403.1528>`__
+4. I. Paraskevakos, A. Luckow, M. Khoshlessan, G. Chantzialexiou,
+   T. E. Cheatham, O. Beckstein, G. Fox, and S. Jha. Task-parallel
+   analysis of molecular dynamics trajectories. In ICPP 2018: 47th
+   International Conference on Parallel Processing, August 13–16,
+   2018, Eugene, OR, USA, page Article No. 49, New York, NY, USA,
+   August 13–16 2018. Association for Computing Machinery, ACM. DOI:
+   [10.1145/3225058.3225128](https://doi.org/10.1145/3225058.3225128)
+
+
 
 ## Stony Brook University and Emory University
 
@@ -275,11 +283,41 @@ title: Publications
 ## Arizona State University
 
 
-10. MDAnalysis: A toolkit for the analysis of molecular dynamics
-   simulations.  N. Michaud-Agrawal, E. J. Denning, T. B. Woolf,
-   and O. Beckstein. J Comp Chem, 32:2319–2327, 2011. doi:
-   10.1002/jcc.21787. More information
-   `here <http://www.mdanalysis.org>`__
+1. R. J. Gowers, M. Linke, J. Barnoud, T. J. E. Reddy, M. N. Melo,
+   S. L. Seyler, D. L. Dotson, J. Domanski, S. Buchoux, I. M. Kenney,
+   and O. Beckstein. `MDAnalysis`_: A Python package for the rapid
+   analysis of molecular dynamics simulations. In S. Benthall and
+   S. Rostrup, editors, Proceedings of the 15th Python in Science
+   Conference, pages 98–105, Austin, TX, 2016. SciPy. DOI:
+   [10.25080/Majora-629e541a-00e](https://doi.org/10.25080/Majora-629e541a-00e)
+2. D. L. Dotson, S. L. Seyler, M. Linke, R. J. Gowers, and
+   O. Beckstein. `datreant`_: persistent, Pythonic trees for heterogeneous
+   data. In S. Benthall and S. Rostrup, editors, Proceedings of the 15th
+   Python in Science Conference, pages 51 – 56, Austin,
+   TX, 2016. [10.25080/Majora-629e541a-007](https://doi.org/10.25080/Majora-629e541a-007)
+3. M. Khoshlessan, I. Paraskevakos, S. Jha, and
+   O. Beckstein. Parallel analysis in MDAnalysis using the Dask
+   parallel computing library. In Katy Huff, David Lippa, Dillon
+   Niederhut, and M. Pacer, editors, Proceedings of the 16th Python in
+   Science Conference, pages 64–72, Austin, TX, 2017. SciPy. DOI:
+   [10.25080/shinma-7f4c6e7-00a](https://doi.org/10.25080/shinma-7f4c6e7-00a)
+4. I. Paraskevakos, A. Luckow, M. Khoshlessan, G. Chantzialexiou,
+   T. E. Cheatham, O. Beckstein, G. Fox, and S. Jha. Task-parallel
+   analysis of molecular dynamics trajectories. In ICPP 2018: 47th
+   International Conference on Parallel Processing, August 13–16,
+   2018, Eugene, OR, USA, page Article No. 49, New York, NY, USA,
+   August 13–16 2018. Association for Computing Machinery, ACM. DOI:
+   [10.1145/3225058.3225128](https://doi.org/10.1145/3225058.3225128)   
+5. S. Fan, M. Linke, I. Paraskevakos, R. J. Gowers, M. Gecht, and
+   O. Beckstein. [PMDA][] — parallel molecular dynamics analysis. In
+   C. Calloway, D. Lippa, D. Niederhut, and D. Schupe, editors,
+   Proceedings of the 18th Python in Science Conference (SciPy 2019),
+   Austin, TX, 2019. SciPy. (to be published)
+
+[MDAnalysis]: https://www.mdanalysis.org
+[datreant]: http://datreant.org
+[PMDA]: https://www.mdanalysis.org/pmda
+
 
 ## Virginia Polytechnic Institute and State University
 
