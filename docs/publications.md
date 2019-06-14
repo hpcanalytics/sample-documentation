@@ -307,8 +307,12 @@ title: Publications
    International Conference on Parallel Processing, August 13–16,
    2018, Eugene, OR, USA, page Article No. 49, New York, NY, USA,
    August 13–16 2018. Association for Computing Machinery, ACM. DOI:
-   [10.1145/3225058.3225128](https://doi.org/10.1145/3225058.3225128)   
-5. S. Fan, M. Linke, I. Paraskevakos, R. J. Gowers, M. Gecht, and
+   [10.1145/3225058.3225128](https://doi.org/10.1145/3225058.3225128)
+5. O. Beckstein, G. Fox, and S. Jha. Convergence of data generation
+   and analysis in the biomolecular simulation community. In: Online
+   Resource for Big Data and Extreme-Scale Computing Workshop, 
+   Nov. 2018. ([pdf](https://www.exascale.org/bdec/sites/www.exascale.org.bdec/files/whitepapers/Beckstein-Fox-Jha_BDEC2_WP_0.pdf))
+6. S. Fan, M. Linke, I. Paraskevakos, R. J. Gowers, M. Gecht, and
    O. Beckstein. [PMDA][] — parallel molecular dynamics analysis. In
    C. Calloway, D. Lippa, D. Niederhut, and D. Schupe, editors,
    Proceedings of the 18th Python in Science Conference (SciPy 2019),
