@@ -55,6 +55,15 @@ sudo npm install -g docusaurus --unsafe-perm=true --allow-root
 yarn add @babel/plugin-proposal-class-properties --dev
 ```
 
+### How to run locally
+
+Go to website directory and use the following command
+
+```bash
+cd website
+npm start
+```
+
 ### How to deploy
 
 Do the changes to the documents
