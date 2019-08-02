@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>CPPTRAJ · HPAnalytics</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;ul&gt;
+&lt;li&gt;Name: &lt;strong&gt;CPPTRAJ&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="CPPTRAJ · HPAnalytics"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hpcanalytics.org/"/><meta property="og:description" content="&lt;ul&gt;
+&lt;li&gt;Name: &lt;strong&gt;CPPTRAJ&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+"/><meta property="og:image" content="https://hpcanalytics.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hpcanalytics.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://hpcanalytics.org/blog/atom.xml" title="HPAnalytics Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://hpcanalytics.org/blog/feed.xml" title="HPAnalytics Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docusaurus.svg" alt="HPAnalytics"/><h2 class="headerTitleWithLogo">HPAnalytics</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/img_proc" target="_self">Doc</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Biomolecular Simulations</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Image Processing</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/img_proc">Image Processing</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Biomolecular Simulations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/bms">Biomolecular Simulations</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/bms-cpptraj">CPPTRAJ</a></li><li class="navListItem"><a class="navItem" href="/docs/bms-mdanalysis">MDAnalysis</a></li><li class="navListItem"><a class="navItem" href="/docs/bms-pmda">PMDA</a></li><li class="navListItem"><a class="navItem" href="/docs/bms-radical-cybertools">RADICAL-Cybertools</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Core SPIDAL</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/spidal">SPIDAL Core Algorithms</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Harp</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/harp">HARP</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">People</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/people">Members</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Publications</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/publications">Publications</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">CPPTRAJ</h1></header><article><div><span><ul>
+<li>Name: <strong>CPPTRAJ</strong></li>
+<li>License: <a href="https://github.com/Amber-MD/cpptraj/blob/master/LICENSE">GPL v3 or greater</a></li>
+<li>Home page: <a href="https://github.com/Amber-MD/cpptraj">https://github.com/Amber-MD/cpptraj</a> and <a href="http://ambermd.org/AmberTools.php">http://ambermd.org/AmberTools.php</a></li>
+<li>Source code URL: <a href="https://github.com/Amber-MD/cpptraj">https://github.com/Amber-MD/cpptraj</a> and <a href="http://ambermd.org/AmberTools.php">http://ambermd.org/AmberTools.php</a></li>
+<li>Docs URL: <a href="https://github.com/Amber-MD/cpptraj/tree/master/doc">https://github.com/Amber-MD/cpptraj/tree/master/doc</a> and
+<a href="http://ambermd.org/doc12/Amber18.pdf">http://ambermd.org/doc12/Amber18.pdf</a> and <a href="http://ambermd.org/tutorials/TrajectoryAnalysis.php#cpptraj">CPPTRAJ tutorials</a></li>
+<li>Citations: [1-3]</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
+<p>CPPTRAJ is a parallelized software package written in C++ for processing, transforming, and analyzing ensembles of molecular dynamics trajectory data. It includes a rich set of commonly used analysis and transformative tools to be a versatile platform for extracting meaningful information in a general way from molecular dynamics simulation data.</p>
+<h2><a class="anchor" aria-hidden="true" id="purpose-and-capabilities"></a><a href="#purpose-and-capabilities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Purpose and Capabilities</h2>
+<p>Thanks to advances in, and the availability of, large-scale computing on both CPUs and GPUs, biomolecular simulation methods with molecular dynamics (MD) have advanced to become significant data producers, even in single straight MD, such as evidenced in long MD simulations on the Anton special purpose computers. With access to large scale compute resources, it is quite common today to apply MD as a large set of either disconnected or loosely coupled (for enhanced sampling with replica-exchange) ensembles of molecular dynamic simulations. This leads to the generation of a large series of MD trajectory data (which refers to the time series of atomic coordinates). In loosely coupled ensembles, the trajectory data may be scrambled and needs to be sorted into new MD trajectories along a given process various (for example temperature or ensemble instance or replica number or other variable like Hamiltonian). PTRAJ, and its successor CPPTRAJ, were developed starting in the 90’s with PTRAJ and 2000’s with CPPTRAJ to provide general purpose capabilities for analyzing MD trajectory data and for transforming, converting, and modifying the raw MD trajectories and derived data.</p>
+<p>Almost all of the common capabilities for analyzing MD trajectories and the derived data are implemented in CPPTRAJ. In addition to accepting many common MD trajectory formats, analysis capabilities range from RMS fitting to imaging, clustering to energy analysis, to hydrogen bond and contact analysis. Refer to the published literature by Roe and Cheatham and see the documentation to better understand the full capabilities. Most notable is four levels of parallelism (MPI over ensemble instances, MPI over files, Open-MP, and CUDA for very time consuming analysis) and the ability to analyze full sets of ensemble or replica exchange simulations in a single run. The code is also fairly well optimized.</p>
+<h2><a class="anchor" aria-hidden="true" id="who-uses-it"></a><a href="#who-uses-it" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Who uses it?</h2>
+<p>Distributed with the <a href="http://ambermd.org/AmberTools.php">AmberTools</a> “open-source” set of MD set-up, simulation and analysis code and also with the latest “beta” version available on GitHub, CPPTRAJ is used by many users and developers of MD simulation codes. According to Google Scholar (December 2018), the main article from 2013 has been cited 1125 times.</p>
+<p>The main data analyzed is time series or ensembles of time series of atomic coordinates generated from MD simulation. The code runs on everything from laptops to the Blue Waters Petascale Resource. Some recent work highlighting the capabilities from the Cheatham lab include large-scale analysis of multidimensional replica exchange data and showing full convergence and reproducibility in the elucidation of the conformational ensembles of various DNA and RNA molecules [4-8]. In each of our papers, the supporting information provides the CPPTRAJ scripts necessary to analyze similar data and we often endeavor to make our MD trajectory data available at <a href="http://amber.utah.edu">http://amber.utah.edu</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="references"></a><a href="#references" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h2>
+<ol>
+<li>DR Roe and TE Cheatham, III. “Parallelization of CPPTRAJ enables large scale analysis of molecular dynamics trajectory data” <em>J. Comp. Chem.</em> <strong>39</strong>, 2110-2117 (2018) doi: <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.25382">10.1002/jcc.25382</a>.</li>
+<li>Z Heidari, DR Roe, R Galindo-Murillo, JB Ghasemi and TE Cheatham, III. “Using Wavelet Analysis To Assist in Identification of Significant Events in Molecular Dynamics Simulations.” <em>J. Chem. Inf. Model.</em> <strong>56</strong>:1282-1291 (2016). doi: <a href="https://pubs.acs.org/doi/10.1021/acs.jcim.5b00727">10.1021/acs.jcim.5b00727</a>.</li>
+<li>DR Roe and TE Cheatham, III. “PTRAJ and CPPTRAJ: Software for processing and analysis of molecular dynamics trajectories.” <em>J. Chem. Theory Comp.</em> <strong>9</strong>, 3084-3095 (2013). Doi: <a href="https://doi.org/10.1021/ct400341p">10.1021/ct400341p</a></li>
+<li>R Galindo-Murillo, JC Robertson, M Zgarbová, J Šponer, M Otyepka, P Jurečka, and TE Cheatham, III. “Assessing the Current State of Amber Force Field Modifications for DNA.” <em>J. Chem. Theory Comp.</em> <strong>12</strong>:4114-4127 (2016). doi: <a href="https://doi.org/10.1021/acs.jctc.6b00186">10.1021/acs.jctc.6b00186</a></li>
+<li>C Bergonzo and TE Cheatham, III. “Improved Force Field Parameters Lead to a Better Description of RNA Structure.” <em>J. Chem. Theory Comp.</em> <strong>11</strong>:3969-3972 (2015). doi: <a href="https://doi.org/10.1021/acs.jctc.5b00444">10.1021/acs.jctc.5b00444</a>.</li>
+<li>C Bergonzo, NM Henriksen, DR Roe, and TE Cheatham, III. “Highly sampled tetranucleotide and tetraloop motifs enable evaluation of common RNA force fields.” <em>RNA</em>. <strong>21</strong>:1578-1590 (2015). doi: <a href="https://doi.org/10.1261/rna.051102.115">10.1261/rna.051102.115</a>.</li>
+<li>R Galindo-Murillo, DR Roe, and TE Cheatham, III. “Convergence and reproducibility in molecular dynamics simulations of the DNA duplex d(GCACGAACGAACGAACGC).” <em>Biochim Biophys Acta</em>. <strong>1850</strong>:1041-1058 (2015). doi: <a href="https://doi.org/10.1016/j.bbagen.2014.09.007">10.1016/j.bbagen.2014.09.007</a></li>
+<li>R Galindo-Murillo, DR Roe, and TE Cheatham, III. “On the absence of intrahelical DNA dynamics on the μs to ms timescale.” <em>Nat Commun.</em> <strong>5</strong>:5152. doi: <a href="https://doi.org/10.1038/ncomms6152">10.1038/ncomms6152</a>.</li>
+</ol>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/bms"><span class="arrow-prev">← </span><span>Biomolecular Simulations</span></a><a class="docs-next button" href="/docs/bms-mdanalysis"><span>MDAnalysis</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#summary">Summary</a></li><li><a href="#purpose-and-capabilities">Purpose and Capabilities</a></li><li><a href="#who-uses-it">Who uses it?</a></li><li><a href="#references">References</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="HPAnalytics" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Indiana University</section></footer></div></body></html>

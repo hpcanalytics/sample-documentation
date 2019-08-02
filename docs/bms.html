@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Biomolecular Simulations · HPAnalytics</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;In the biomolecular simulation (BMS) community, classical molecular dynamics (MD) simulations enable the elucidation of the relationship between the structure of biomolecules such as proteins, nucleic acids, or lipids and their function via their dynamics.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Biomolecular Simulations · HPAnalytics"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hpcanalytics.org/"/><meta property="og:description" content="&lt;p&gt;In the biomolecular simulation (BMS) community, classical molecular dynamics (MD) simulations enable the elucidation of the relationship between the structure of biomolecules such as proteins, nucleic acids, or lipids and their function via their dynamics.&lt;/p&gt;
+"/><meta property="og:image" content="https://hpcanalytics.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hpcanalytics.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://hpcanalytics.org/blog/atom.xml" title="HPAnalytics Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://hpcanalytics.org/blog/feed.xml" title="HPAnalytics Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docusaurus.svg" alt="HPAnalytics"/><h2 class="headerTitleWithLogo">HPAnalytics</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/img_proc" target="_self">Doc</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Biomolecular Simulations</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Image Processing</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/img_proc">Image Processing</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Biomolecular Simulations</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/bms">Biomolecular Simulations</a></li><li class="navListItem"><a class="navItem" href="/docs/bms-cpptraj">CPPTRAJ</a></li><li class="navListItem"><a class="navItem" href="/docs/bms-mdanalysis">MDAnalysis</a></li><li class="navListItem"><a class="navItem" href="/docs/bms-pmda">PMDA</a></li><li class="navListItem"><a class="navItem" href="/docs/bms-radical-cybertools">RADICAL-Cybertools</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Core SPIDAL</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/spidal">SPIDAL Core Algorithms</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Harp</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/harp">HARP</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">People</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/people">Members</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Publications</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/publications">Publications</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Biomolecular Simulations</h1></header><article><div><span><p>In the biomolecular simulation (BMS) community, classical molecular dynamics (MD) simulations enable the elucidation of the relationship between the structure of biomolecules such as proteins, nucleic acids, or lipids and their function via their dynamics.
+MD simulations are wiedely used; for example, they account for approximately one quarter of the service units used on XSEDE resources.
+Although traditionally the generation of the data has been the computational bottleneck and has been highly optimized, more and more the analysis of the data is becoming a rate limiting step.
+Within the NSF DIBBs SPIDAL project we have been working on leveraging HPC resources for the analysis of BMS data.</p>
+<h2><a class="anchor" aria-hidden="true" id="packages"></a><a href="#packages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Packages</h2>
+<p>A number of software packages were developed or improved using the insights from the SPIDAL project.
+More information about these packages can be found on their own pages.</p>
+<ol>
+<li><a href="bms-ccptraj.md">CCPTRAJ</a> is a parallelized software package written in C++ for processing, transforming, and analyzing ensembles of molecular dynamics trajectory data.</li>
+<li><a href="/docs/bms-mdanalysis">MDAnalysis</a> is an object-oriented Python library to analyze trajectories from molecular dynamics (MD) simulations in most commonly (and some uncommonly) used file formats.</li>
+<li><a href="/docs/bms-pmda">PMDA</a>  parallelizes common analysis algorithms in <a href="/docs/bms-mdanalysis">MDAnalysis</a> through a task-based approach with the Dask library and runs parallel analysis on platforms ranging from laptops to supercomputers.</li>
+<li><a href="/docs/bms-radical-cybertools">RADICAL-Cybertools</a>  are a set of software modules that can be used independently, composed into a single system, or integrated into existing systems to extend their functionalities.</li>
+</ol>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/img_proc"><span class="arrow-prev">← </span><span>Image Processing</span></a><a class="docs-next button" href="/docs/bms-cpptraj"><span>CPPTRAJ</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#packages">Packages</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="HPAnalytics" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Indiana University</section></footer></div></body></html>

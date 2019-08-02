@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>PMDA · HPAnalytics</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;ul&gt;
+&lt;li&gt;Name: &lt;strong&gt;PMDA&lt;/strong&gt; (“Parallel MDAnalysis”)&lt;/li&gt;
+&lt;/ul&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="PMDA · HPAnalytics"/><meta property="og:type" content="website"/><meta property="og:url" content="https://hpcanalytics.org/"/><meta property="og:description" content="&lt;ul&gt;
+&lt;li&gt;Name: &lt;strong&gt;PMDA&lt;/strong&gt; (“Parallel MDAnalysis”)&lt;/li&gt;
+&lt;/ul&gt;
+"/><meta property="og:image" content="https://hpcanalytics.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://hpcanalytics.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://hpcanalytics.org/blog/atom.xml" title="HPAnalytics Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://hpcanalytics.org/blog/feed.xml" title="HPAnalytics Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docusaurus.svg" alt="HPAnalytics"/><h2 class="headerTitleWithLogo">HPAnalytics</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/img_proc" target="_self">Doc</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Biomolecular Simulations</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Image Processing</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/img_proc">Image Processing</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Biomolecular Simulations</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/bms">Biomolecular Simulations</a></li><li class="navListItem"><a class="navItem" href="/docs/bms-cpptraj">CPPTRAJ</a></li><li class="navListItem"><a class="navItem" href="/docs/bms-mdanalysis">MDAnalysis</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/bms-pmda">PMDA</a></li><li class="navListItem"><a class="navItem" href="/docs/bms-radical-cybertools">RADICAL-Cybertools</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Core SPIDAL</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/spidal">SPIDAL Core Algorithms</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Harp</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/harp">HARP</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">People</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/people">Members</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Publications</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/publications">Publications</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">PMDA</h1></header><article><div><span><ul>
+<li>Name: <strong>PMDA</strong> (“Parallel MDAnalysis”)</li>
+<li>License: <a href="https://github.com/MDAnalysis/pmda/blob/master/LICENSE">GNU General Public License v2</a></li>
+<li>Home page: <a href="https://www.mdanalysis.org/pmda">https://www.mdanalysis.org/pmda</a></li>
+<li>Source code: <a href="https://github.com/MDAnalysis/pmda">https://github.com/MDAnalysis/pmda</a></li>
+<li>Docs: <a href="https://www.mdanalysis.org/pmda/">https://www.mdanalysis.org/pmda/</a></li>
+<li>Citation: [1]</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
+<p>PMDA parallelizes common analysis algorithms in <a href="/docs/bms-mdanalysis">MDAnalysis</a> through a task-based approach with the <a href="https://dask.org">Dask</a> library. Although still in early development, it is already used on resources ranging from multi-core laptops to XSEDE supercomputers to speed up analysis of molecular dynamics trajectories [1].</p>
+<h2><a class="anchor" aria-hidden="true" id="purpose-and-capabilities"></a><a href="#purpose-and-capabilities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Purpose and Capabilities</h2>
+<p>To speed up analysis of molecular dynamics trajectories, PMDA implements a simple split-apply-combined scheme for parallel trajectory analysis for MDAnalysis [1-3]. The trajectory is partitioned into blocks (&quot;split&quot;) and analysis is performed separately and in parallel on each block (“apply”). The results from each block are gathered and combined (“combine”).</p>
+<p>PMDA allows one to perform parallel trajectory analysis with pre-defined analysis tasks which have the same input and output as MDAnalysis.  In addition, it provides a common interface that makes it easy to create user-defined parallel analysis modules.</p>
+<h2><a class="anchor" aria-hidden="true" id="who-uses-it"></a><a href="#who-uses-it" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Who uses it?</h2>
+<p>The audience of this package are researchers who are familiar with MDAnalysis and want to speed up analysis of molecular dynamics trajectories. Best results are observed if expensive computations are performed for each frame because I/O (loading each trajectory frame into memory) represents a substantial cost.</p>
+<p>PMDA is <a href="https://www.mdanalysis.org/pmda/#installation">easy to install</a> and can improve performance of analysis on machines ranging from laptops to supercomputers with hundreds of cores. Like <a href="/docs/bms-mdanalysis">MDAnalysis</a> it runs under Linux, Windows, and macOS and supports both Python 3.5+ and legacy Python 2.7.</p>
+<h2><a class="anchor" aria-hidden="true" id="references"></a><a href="#references" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h2>
+<ol>
+<li>S. Fan, M. Linke, I. Paraskevakos, R. J. Gowers, M. Gecht, and O. Beckstein. PMDA — parallel molecular dynamics analysis. In C. Calloway, D. Lippa, D. Niederhut, and D. Schupe, editors, Proceedings of the 18th Python in Science Conference (SciPy 2019), Austin, TX, 2019. SciPy.</li>
+<li>M. Khoshlessan, I. Paraskevakos, S. Jha, and O. Beckstein. Parallel analysis in MDAnalysis using the Dask parallel computing library. <em>In</em> Katy Huff, David Lippa, Dillon Niederhut, and M. Pacer, editors, <em>Proceedings of the 16th Python in Science Conference</em>, pages 64–72, Austin, TX, 2017. SciPy. doi:<a href="https://doi.org/10.25080/shinma-7f4c6e7-00a">10.25080/shinma-7f4c6e7-00a</a>.</li>
+<li>Ioannis Paraskevakos, Andre Luckow, Mahzad Khoshlessan, George Chantzialexiou, Thomas E. Cheatham, Oliver Beckstein, Geoffrey C. Fox and Shantenu Jha. Task-parallel Analysis of Molecular Dynamics Trajectories. In <em>47th International Conference on Parallel Processing (ICPP 2018)</em>. doi: <a href="https://doi.org/10.1145/3225058.3225128">10.1145/3225058.3225128</a>.</li>
+</ol>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/bms-mdanalysis"><span class="arrow-prev">← </span><span>MDAnalysis</span></a><a class="docs-next button" href="/docs/bms-radical-cybertools"><span>RADICAL-Cybertools</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#summary">Summary</a></li><li><a href="#purpose-and-capabilities">Purpose and Capabilities</a></li><li><a href="#who-uses-it">Who uses it?</a></li><li><a href="#references">References</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="HPAnalytics" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Indiana University</section></footer></div></body></html>

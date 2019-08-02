@@ -8,6 +8,11 @@
 <url> <loc>https://hpcanalytics.org/blog/2017/09/25/testing-rss</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://hpcanalytics.org/blog/2017/04/10/blog-post-two</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://hpcanalytics.org/blog/2016/03/11/blog-post</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://hpcanalytics.org/docs/bms-cpptraj</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hpcanalytics.org/docs/bms-cpptraj" /> </url>
+<url> <loc>https://hpcanalytics.org/docs/bms-mdanalysis</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hpcanalytics.org/docs/bms-mdanalysis" /> </url>
+<url> <loc>https://hpcanalytics.org/docs/bms-pmda</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hpcanalytics.org/docs/bms-pmda" /> </url>
+<url> <loc>https://hpcanalytics.org/docs/bms-radical-cybertools</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hpcanalytics.org/docs/bms-radical-cybertools" /> </url>
+<url> <loc>https://hpcanalytics.org/docs/bms</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hpcanalytics.org/docs/bms" /> </url>
 <url> <loc>https://hpcanalytics.org/docs/spidal</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hpcanalytics.org/docs/spidal" /> </url>
 <url> <loc>https://hpcanalytics.org/docs/harp</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hpcanalytics.org/docs/harp" /> </url>
 <url> <loc>https://hpcanalytics.org/docs/img_proc</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://hpcanalytics.org/docs/img_proc" /> </url>
