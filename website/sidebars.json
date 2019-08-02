@@ -1,8 +1,10 @@
 {
   "docs": {
     "Image Processing": ["img_proc"],
+    "Biomolecular Simulations": ["bms", "bms-cpptraj", "bms-mdanalysis", "bms-pmda", "bms-radical-cybertools"],
     "Core SPIDAL": ["spidal"],
     "Harp": ["harp"],
-    "People": ["people"]
+    "People": ["people"],
+    "Publications": ["publications"]
   }
 }
