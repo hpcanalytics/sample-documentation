@@ -286,7 +286,7 @@ title: Publications
    Conference, pages 98–105, Austin, TX, 2016. SciPy. DOI:
    [10.25080/Majora-629e541a-00e](https://doi.org/10.25080/Majora-629e541a-00e)
 2. D. L. Dotson, S. L. Seyler, M. Linke, R. J. Gowers, and
-   O. Beckstein. `datreant`_: persistent, Pythonic trees for heterogeneous
+   O. Beckstein. [datreant][]: persistent, Pythonic trees for heterogeneous
    data. In S. Benthall and S. Rostrup, editors, Proceedings of the 15th
    Python in Science Conference, pages 51 – 56, Austin,
    TX, 2016. [10.25080/Majora-629e541a-007](https://doi.org/10.25080/Majora-629e541a-007)
@@ -306,16 +306,19 @@ title: Publications
 5. O. Beckstein, G. Fox, and S. Jha. Convergence of data generation
    and analysis in the biomolecular simulation community. In: Online
    Resource for Big Data and Extreme-Scale Computing Workshop, 
-   Nov. 2018. [pdf](https://www.exascale.org/bdec/sites/www.exascale.org.bdec/files/whitepapers/Beckstein-Fox-Jha_BDEC2_WP_0.pdf)
-6. S. Fan, M. Linke, I. Paraskevakos, R. J. Gowers, M. Gecht, and
-   O. Beckstein. [PMDA][] — parallel molecular dynamics analysis. In
-   C. Calloway, D. Lippa, D. Niederhut, and D. Schupe, editors,
-   Proceedings of the 18th Python in Science Conference (SciPy 2019),
-   Austin, TX, 2019. SciPy. (to be published)
+   Nov. 2018. ([pdf](https://www.exascale.org/bdec/sites/www.exascale.org.bdec/files/whitepapers/Beckstein-Fox-Jha_BDEC2_WP_0.pdf))
+6. Shujie Fan, Max Linke, Ioannis Paraskevakos, Richard J. Gowers, 
+   Michael Gecht, and Oliver Beckstein. PMDA - Parallel Molecular Dynamics 
+   Analysis. In Chris Calloway, David Lippa, Dillon Niederhut, and David Shupe, 
+   editors, Proceedings of the 18th Python in Science Conference, pages 134 – 142, 
+   Austin, TX, 2019. DOI: [10.25080/Majora-7ddc1dd1-013](https://doi.org/10.25080/Majora-7ddc1dd1-013)
+7. M. Khoshlessan, I. Paraskevakos, G. C. Fox, S. Jha, and O. Beckstein. 
+   Parallel performance of molecular dynamics trajectory analysis depends on 
+   read I/O. arXiv, [arXiv:1907.00097](https://arxiv.org/abs/1907.00097), 2019.
 
-[MDAnalysis](https://www.mdanalysis.org)
-[datreant](http://datreant.org)
-[PMDA](https://www.mdanalysis.org/pmda)
+[MDAnalysis]: https://www.mdanalysis.org
+[datreant]: http://datreant.org
+[PMDA]: https://www.mdanalysis.org/pmda
 
 
 ## Virginia Polytechnic Institute and State University
