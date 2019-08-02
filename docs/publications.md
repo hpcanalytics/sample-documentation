@@ -24,19 +24,18 @@ title: Publications
 1. Hadoop on HPC: Integrating Hadoop and Pilot-based Dynamic Resource
    Management Andre Luckow, Ioannis Paraskevakos, George
    Chantzialexiou, Shantenu Jha Workshop on High-Performance Big Data
-   Computing, 2016 [`link <http://arxiv.org/abs/1602.00345>`_] [`bib
-   <https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/hadoop-on-hpc.bib>`_]
-   : hadoop-on-hpc `http://arxiv.org/abs/1602.00345
-   <http://arxiv.org/abs/1602.00345>`_
+   Computing, 2016 [link](http://arxiv.org/abs/1602.00345) [bib]
+   (https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/hadoop-on-hpc.bib)
+   : hadoop-on-hpc [http://arxiv.org/abs/1602.00345](http://arxiv.org/abs/1602.00345)
 2. Pilot-Abstraction: A Valid Abstraction for Data-Intensive Application
    on HPC, Hadoop and Cloud Infrastructures?, Andre Luckow,
    Pradeep Mantha, Shantenu Jha pdf version
-   `here <http://arxiv.org/pdf/1501.05041v1.pdf>`__
+   [here](http://arxiv.org/pdf/1501.05041v1.pdf)
 3. A Tale of Two Data-Intensive Paradigms: Applications, Abstractions,
    and Architectures, Shantenu Jha, Judy Qiu, Andre Luckow,
    Pradeep Mantha, Geoffrey C. Fox 2014 IEEE International Congress on
    Big Data (BigData Congress), 2014 pdf version
-   `here <http://arxiv.org/abs/1403.1528>`__
+   [here](http://arxiv.org/abs/1403.1528)
 4. I. Paraskevakos, A. Luckow, M. Khoshlessan, G. Chantzialexiou,
    T. E. Cheatham, O. Beckstein, G. Fox, and S. Jha. Task-parallel
    analysis of molecular dynamics trajectories. In ICPP 2018: 47th
@@ -52,7 +51,7 @@ title: Publications
 
 1. Ablimit Aji and Fusheng Wang (2016). `Challenges and Approaches in
    Spatial Big Data Management 
-   <http://www.crcnetbase.com/doi/abs/10.1201/b19694-3>`_. Big Data:
+   [http://www.crcnetbase.com/doi/abs/10.1201/b19694-3](http://www.crcnetbase.com/doi/abs/10.1201/b19694-3). Big Data:
    Storage, Sharing, and Security (3S) Fei Hu.  Auerbach Publications.
 
 2. Cong Xie, Wen Zhong， Jun Kong , Wei Xu, Klaus Mueller, and Fusheng
@@ -68,9 +67,8 @@ title: Publications
    for Medicine and Healthcare.
 
 4. Jun Kong, Pengyue Zhang, Yanhui Liang, George Teodorou,
-   Daniel J. Brat and Fusheng Wang (2016). `Robust Cell Segmentation
-   for Histological Images of Glioblastoma
-   <http://ieeexplore.ieee.org/Xplore/defdeny.jsp?url=http%3A%2F%2Fieeexplore.ieee.org%2Fstamp%2Fstamp.jsp%3Ftp%3D%26arnumber%3D7493444&denyReason=-134&arnumber=7493444&productsMatched=null&userType=inst>`_.
+   Daniel J. Brat and Fusheng Wang (2016). [`Robust Cell Segmentation
+   for Histological Images of Glioblastoma](http://ieeexplore.ieee.org/Xplore/defdeny.jsp?url=http%3A%2F%2Fieeexplore.ieee.org%2Fstamp%2Fstamp.jsp%3Ftp%3D%26arnumber%3D7493444&denyReason=-134&arnumber=7493444&productsMatched=null&userType=inst)
    International Symposium on Biomedical Imaging (ISBI 2016).
 
 5. Xin Chen and Fusheng Wang (). Integrative Spatial Data Analytics
@@ -124,19 +122,19 @@ title: Publications
     "TSmap3D: Browser Visualization of High Dimensional Time Series Data",
     Technical report May 10 2016
     pdf version
-    `here <http://dsc.soic.indiana.edu/publications/tsmap3d.pdf>`__
+    [here](http://dsc.soic.indiana.edu/publications/tsmap3d.pdf)
 2.  Saliya Ekanayake, Supun Kamburugamuve and Geoffrey Fox,
     “SPIDAL: High Performance Data Analytics with Java and MPI on Large Multicore HPC Clusters”,
     Technical Report January 5 2016, Proceedings of 24th
     High Performance Computing Symposium (HPC 2016),
     April 3-6, 2016, Pasadena, CA, USA as part of the SCS Spring Simulation Multi-Conference (SpringSim'16)
     pdf version
-    `here <http://dsc.soic.indiana.edu/publications/hpc2016-spidal-high-performance-submit-18-public.pdf>`__
+    [here](http://dsc.soic.indiana.edu/publications/hpc2016-spidal-high-performance-submit-18-public.pdf)
 3.  Geoffrey Fox, Judy Qiu, Shantenu Jha, Saliya Ekanayake, and Supun Kamburugamuve,
     “Big Data, Simulations and HPC Convergence”
     Technical Report January 30 2016. DOI: 10.13140/RG.2.1.1858.8566
     pdf version
-    `here <http://dsc.soic.indiana.edu/publications/HPCBigDataConvergence.pdf>`__
+    [here](http://dsc.soic.indiana.edu/publications/HPCBigDataConvergence.pdf)
 5.  Supun Kamburugamuve, Saliya Ekanayake, Milinda Pathirage, Geoffrey Fox,
     “Towards High Performance Processing of Streaming Data in Large Data Centers”
     Technical Report January 26 2016, to be published in proceedings of
@@ -145,75 +143,73 @@ title: Publications
     Distributed Processing Symposium (IPDPS 2016),Chicago Hyatt Regency,
     Chicago, Illinois USA, Friday, May 27th, 2016
     pdf version
-    `here <http://dsc.soic.indiana.edu/publications/high_performance_processing_stream.pdf>`__
+    [here](http://dsc.soic.indiana.edu/publications/high_performance_processing_stream.pdf)
 5.  Bingjing Zhang, Peng Bo, Judy Qiu, "Model Data-Centric Computation
     Abstractions in Machine Learning Applications", to appear in
     3rd Workshop on Algorithms and Systems for MapReduce and Beyond (BeyondMR2016),
     held in conjunction with SIGMOD/PODS2016, July 1, 2016
     pdf version
-    `here <http://ipcc.soic.iu.edu/Computation%20Abstractions.pdf>`__
+    [here](http://ipcc.soic.iu.edu/Computation%20Abstractions.pdf)
 6.  Bingjing Zhang, Bo Peng, Judy Qiu,
     “High Performance LDA through Collective Model Communication Optimization”,
     Proceedings of International Conference on Computational Science (ICCS2016) conference,
     June 6-8, 2016, San Diego, California.
     pdf version
-    `here <http://ipcc.soic.iu.edu/Harp-LDA.pdf>`__
+    [here](http://ipcc.soic.iu.edu/Harp-LDA.pdf)
 7.  Binging Zhang,” A Collective Communication Layer for the Software Stack of Big Data Analytics”,
     Doctoral Symposium. Proceedings of IEEE International Conference on
     Cloud Engineering (IC2E2016) Conference, April 4-8, 2016, Berlin, Germany.
-    `here <http://ipcc.soic.iu.edu/A%20Collective%20Communication%20Layer.pdf>`__
+    [here](http://ipcc.soic.iu.edu/A%20Collective%20Communication%20Layer.pdf)
 8.  Towards HPC-ABDS: An Initial High-Performance Big Data Stack, in
     Building Robust Big Data Ecosystem, Judy Qiu, Shantenu Jha,
     Andre Luckow and Geoffrey C. Fox, ISO/IEC JTC 1 Study Group on Big
     Data. March 18-21, 2014. San Diego Supercomputer Center, San Diego
     pdf version
-    `here <http://dsc.soic.indiana.edu/publications/nist-hpc-abds.pdf>`__
+    [here](http://dsc.soic.indiana.edu/publications/nist-hpc-abds.pdf)
 9.  High Performance High Functionality Big Data Software Stack In Big
     Data and Extreme-scale Computing (BDEC), Geoffrey Fox, Judy
     Qiu, and Shantenu Jha Fukuoka, Japan, 2014 pdf version
-    `here <http://www.exascale.org/bdec/sites/www.exascale.org.bdec/files/whitepapers/fox.pdf>`__
+    [here](http://www.exascale.org/bdec/sites/www.exascale.org.bdec/files/whitepapers/fox.pdf)
 10.  A Tale of Two Data-Intensive Approaches: Applications, Architectures
     and Infrastructure, Shantenu Jha, Judy Qiu, Andre Luckow,
     Pradeep Mantha, and Geoffrey C. Fox In 3rd International IEEE
     Congress on Big Data Application and Experience Track. June 27- July
     2, 2014. Anchorage, Alaska pdf version
-    `here <http://arxiv.org/abs/1403.1528>`__
+    [here](http://arxiv.org/abs/1403.1528)
 11.  HPC-ABDS Kaleidoscope of over 300 Apache Big Data Stack and HPC
     Technologies Accessed April 8, 2014 Available
-    `here <http://hpc-abds.org/kaleidoscope/>`__
+    [here](http://hpc-abds.org/kaleidoscope/)
 12.  Towards an Understanding of Facets and Exemplars of Big Data
     Applications, Geoffrey C. Fox, Shantenu Jha, Judy Qiu, and
     Andre Luckow In 20 Years of Beowulf: Workshop to Honor Thomas
     Sterling's 65th Birthday, October 14, 2014. Annapolis, MD pdf
     version
-    `here <http://dsc.soic.indiana.edu/publications/OgrePaperv9.pdf>`__
+    [here](http://dsc.soic.indiana.edu/publications/OgrePaperv9.pdf)
 13.  Big Data Use Cases and Requirements, Geoffrey Fox and Wo
     Chang In 1st Big Data Interoperability Framework Workshop: Building
     Robust Big Data Ecosystem ISO/IEC JTC 1 Study Group on Big Data
     March 18 - 21, 2014. San Diego Supercomputer Center, San Diego, CA
     pdf version
-    `here <http://dsc.soic.indiana.edu/publications/NISTUseCase.pdf>`__
+    [here](http://dsc.soic.indiana.edu/publications/NISTUseCase.pdf)
 14.  NIST Big Data Use Case & Requirements 2013 [accessed March 1, 2015]
-    Available `here <http://bigdatawg.nist.gov/V1_output_docs.php>`__
+    Available [here](http://bigdatawg.nist.gov/V1_output_docs.php)
 15.  Ogres: A Systematic Approach to Big Data Benchmarks,
     Geoffrey C. Fox, Shantenu Jha, Judy Qiu, and Andre Luckow In Big
     Data and Extreme-scale Computing (BDEC) January 29-30, 2015.
     Barcelona pdf version
-    `here <http://www.exascale.org/bdec/sites/www.exascale.org.bdec/files/whitepapers/OgreFacets.pdf>`__
+    [here](http://www.exascale.org/bdec/sites/www.exascale.org.bdec/files/whitepapers/OgreFacets.pdf)
 16.  Towards a Comprehensive Set of Big Data Benchmarks, Geoffrey
     C. Fox, Shantenu Jha, Judy Qiu, Saliya Ekanayake, and Andre Luckow
     February 15, 2015 pdf version
-    `here <http://dsc.soic.indiana.edu/publications/OgreFacetsv9.pdf>`__
+    [here](http://dsc.soic.indiana.edu/publications/OgreFacetsv9.pdf)
 17. ESTIMATING BEDROCK AND SURFACE LAYER BOUNDARIES AND CONFIDENCE
    INTERVALS IN ICE SHEET RADAR IMAGERY USING MCMC, Stefan
    Lee, Jerome Mitchell, David J. Crandall, and Geoffrey C. Fox The
    International Conference on Image Processing (ICIP), Paris, France.
-   October 27-29, 2014 pdf version `here
-   <http://dsc.soic.indiana.edu/publications/ICIPpaper.pdf>`__
+   October 27-29, 2014 pdf version [here](http://dsc.soic.indiana.edu/publications/ICIPpaper.pdf)
 18. Harp: Collective Communication on Hadoop, Bingjing Zhang,
    Yang Ruan, and Judy Qi In IEEE International Conference on Cloud
-   Engineering (IC2E), March 9-12, 2015. Tempe, AZ pdf version `here
-   <http://dsc.soic.indiana.edu/publications/HarpQiuZhang.pdf>`__
+   Engineering (IC2E), March 9-12, 2015. Tempe, AZ pdf version [here](http://dsc.soic.indiana.edu/publications/HarpQiuZhang.pdf)
 19. HPC-ABDS: High Performance Computing Enhanced Apache Big Data
    Stack. Geoffrey Fox, Judy Qiu, Shantenu Jha, Supun Kamburugamuve
    and Andre Luckow Invited talk at 2nd International Workshop on
@@ -221,13 +217,12 @@ title: Publications
    at CCGrid2015, the 15th IEEE/ACM International Symposium on
    Cluster, Cloud and Grid Computing, held in Shenzhen, Guangdong,
    China pdf version `here
-   <http://dsc.soic.indiana.edu/publications/HPC-ABDSDescribedv2.pdf>`__
+   (http://dsc.soic.indiana.edu/publications/HPC-ABDSDescribedv2.pdf)
 20. Parallel Clustering of High-Dimensional Social Media Data
    Streams. Xiaoming Gao, Emilio Ferrara, Judy Qiu Presented at
    CCGrid2015, the 15th IEEE/ACM International Symposium on Cluster,
    Cloud and Grid Computing, held in Shenzhen, Guangdong, China pdf
-   version `here
-   <http://dsc.soic.indiana.edu/publications/Parallel%20Clustering%20of%20High-Dimensional%20Social%20Media%20Data%20Streams_v11.pdf>`__
+   version [here](http://dsc.soic.indiana.edu/publications/Parallel%20Clustering%20of%20High-Dimensional%20Social%20Media%20Data%20Streams_v11.pdf)
 
 ## University of Kansas
 
@@ -242,13 +237,13 @@ title: Publications
    S. Gogineni, S.C. Rybarski, S.K. Young, A.N. Mabrey, B.M. Wagman and
    M. Morlighem Journal of Geophysical Research Earth Surface, Jan 2015,
    2014JF003215. pdf version
-   `here <http://onlinelibrary.wiley.com/doi/10.1002/2014JF003215/full>`__
+   [here](http://onlinelibrary.wiley.com/doi/10.1002/2014JF003215/full)
 3. Bed Topography of Jakobshavn and Byrd Glaciers In Big Data and
    Extreme-scale Computing (BDEC), S. Gogineni, J.-B. Yan, J.
    Paden, C. Leuschen, J. Li, F. Rodriguez-Morales, D. Braaten, K.
    Purdon, Z. Wang, W. Liu, and J. Gauch Journal of Glaciology, vol. 60,
    no. 223, pp. 813-833, Nov 2014. pdf version
-   `here <http://www.ingentaconnect.com/content/igsoc/jog/2014/00000060/00000223/art00001>`__
+   [here](http://www.ingentaconnect.com/content/igsoc/jog/2014/00000060/00000223/art00001)
 4. Radar Mapping of Isunguata Sermia Glacier, Greenland, In Big Data and
    Extreme-scale Computing (BDEC), Ken Jezek, Xiaoqing Wu, John
    Paden, Carl Leuschen IGS Journal of Glaciology, vol. 59, no. 218,
@@ -257,7 +252,7 @@ title: Publications
    2012 International Conference on Pattern Recognition, David
    J. Crandall, Geoffrey C. Fox, John D. Paden Journal of Glaciology,
    vol. 60, no. 223, pp. 813-833, Nov 2014. pdf version
-   `here <http://vision.soic.indiana.edu/wp/wp-content/uploads/icpr12-ice1.pdf>`__
+   [here](http://vision.soic.indiana.edu/wp/wp-content/uploads/icpr12-ice1.pdf)
 6. High-Altitude Radar Measurements of Ice Thickness over the Antarctic
    and Greenland Ice Sheets as a part of Operation Ice Bridge,
    Jilu Li, John Paden, Carl Leuschen, Fernando Rodriguez-Morales,
@@ -265,20 +260,20 @@ title: Publications
    Sivaprasad Gogineni, IEEE Transactions on Geoscience and Remote
    Sensing, 2012, vol.50, no. 12, doi: 10.1109/TGRS.2012.2203822. pdf
    version
-   `here <http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6248690>`__
+   [here](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6248690]
 7. Ice-sheet bed 3-D tomography, John Paden, Torry Akins, David
    Dunson, Christopher Allen, Sivaprasad Gogineni Journal of Glaciology,
    56 (195), 3-11. pdf version
-   `here <http://www.researchgate.net/publication/233559746_Ice-sheet_bed_3-D_tomography>`__
+   [here](http://www.researchgate.net/publication/233559746_Ice-sheet_bed_3-D_tomography)
 8. Comparison of tomographic methods for ice bottom mapping,,
    John D. Paden, Sahana Raghunandan, Shannon Blunt, Carl Leuschen
    International Glaciological Society Radioglaciology 2013 Meeting,
    Sept 9-13, entry 67A084. Information available
-   `here <http://www.igsoc.org/symposia/2013/kansas/proceedings/proceedings.html>`__
+   [here](http://www.igsoc.org/symposia/2013/kansas/proceedings/proceedings.html)
 9. 3D Imaging of Ice Sheets, John Paden, Christopher Allen,
    Prasad Gogineni IEEE Geoscience and Remote Sensing Symposium, 2010
    (IGARSS ’10), Honolulu, Hawaii, 25-30 July, 2010. pdf version 
-   `here <http://geodesy.unr.edu/hanspeterplag/library/IGARSS2010/pdfs/4526.pdf>`__
+   [here](http://geodesy.unr.edu/hanspeterplag/library/IGARSS2010/pdfs/4526.pdf)
 
 ## Arizona State University
 
@@ -311,16 +306,16 @@ title: Publications
 5. O. Beckstein, G. Fox, and S. Jha. Convergence of data generation
    and analysis in the biomolecular simulation community. In: Online
    Resource for Big Data and Extreme-Scale Computing Workshop, 
-   Nov. 2018. ([pdf](https://www.exascale.org/bdec/sites/www.exascale.org.bdec/files/whitepapers/Beckstein-Fox-Jha_BDEC2_WP_0.pdf))
+   Nov. 2018. [pdf](https://www.exascale.org/bdec/sites/www.exascale.org.bdec/files/whitepapers/Beckstein-Fox-Jha_BDEC2_WP_0.pdf)
 6. S. Fan, M. Linke, I. Paraskevakos, R. J. Gowers, M. Gecht, and
    O. Beckstein. [PMDA][] — parallel molecular dynamics analysis. In
    C. Calloway, D. Lippa, D. Niederhut, and D. Schupe, editors,
    Proceedings of the 18th Python in Science Conference (SciPy 2019),
    Austin, TX, 2019. SciPy. (to be published)
 
-[MDAnalysis]: https://www.mdanalysis.org
-[datreant]: http://datreant.org
-[PMDA]: https://www.mdanalysis.org/pmda
+[MDAnalysis](https://www.mdanalysis.org)
+[datreant](http://datreant.org)
+[PMDA](https://www.mdanalysis.org/pmda)
 
 
 ## Virginia Polytechnic Institute and State University
@@ -332,9 +327,9 @@ title: Publications
    Performance Computing, Networking, Storage and Analysis. Salt Lake
    City, UT, November 13-18, 2016
 
-2. Arifuzzaman S, Khan M, Marathe M (2015) `A Space-efficient Parallel
-   Algorithm for Counting Exact Triangles in Massive Networks
-   <https://ndssl.vbi.vt.edu/cms/ViewItem.php?id=70042831-53a3-9994-ed6c-3bff503f23b2>`_. In
+2. Arifuzzaman S, Khan M, Marathe M (2015) [`A Space-efficient Parallel
+   Algorithm for Counting Exact Triangles in Massive Networks]
+   (https://ndssl.vbi.vt.edu/cms/ViewItem.php?id=70042831-53a3-9994-ed6c-3bff503f23b2). In
    Proceedings of the 17th IEEE International Conference on High
    Performance Computing and Communications.  New York City, NY,
    August 24-26
@@ -343,20 +338,20 @@ title: Publications
    Sequences.  Maksudul Alam and Maleq Khan. 12th IFIP
    International Conference on Network and Parallel Computing (NPC), New
    York City, Sep. 2015. pdf version
-   `here <http://arxiv.org/abs/1406.1215>`__.
+   [here](http://arxiv.org/abs/1406.1215].
 
 4. A Space-efficient Parallel Algorithm for Counting Exact Triangles in
    Massive Networks.  Shaikh Arifuzzaman, Maleq Khan and Madhav
    Marathe. 17th IEEE International Conference on High Performance
    Computing and Communications (HPCC), New York City, Aug. 2015. pdf
    version
-   `here <http://staff.vbi.vt.edu/maleq/papers/sptriangle.pdf>`__.
+   [here](http://staff.vbi.vt.edu/maleq/papers/sptriangle.pdf).
 
 5. Fast Parallel Conversion of Edge List to Adjacency List for
    Large-Scale Graphs.  Shaikh Arifuzzaman and Maleq Khan. 23rd
    High Performance Computing Symposium (HPC), Alexandria, VA, USA,
    April 2015. pdf version
-   `here <http://staff.vbi.vt.edu/maleq/papers/conversion.pdf>`__.
+   [here](http://staff.vbi.vt.edu/maleq/papers/conversion.pdf).
 
 6. Distributed Memory Parallel Algorithms for Massive Graphs.  
    Maksudul Alam, Shaikh Arifuzzaman, Hasanuzzaman Bhuiyan, Maleq Khan,
